@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://c81xiragby42t" path="res://asset/ai-temp-do-not-use/dce7cf61-291b-4261-80a0-a05f99e2ed5d.jpeg" id="1_j8fdh"]
 [ext_resource type="Script" uid="uid://derhcfeggavhy" path="res://dce_7_cf_61291b_426180a_0a_05f_99e_2_ed_5d.gd" id="2_3k6nj"]
 [ext_resource type="FontFile" uid="uid://cwlpn0eph2i05" path="res://asset/font/Black_Ops_One/BlackOpsOne-Regular.ttf" id="3_7xdm4"]
+[ext_resource type="Texture2D" uid="uid://cofngsw18cunt" path="res://asset/concept/frog.png" id="4_0ygtt"]
+[ext_resource type="Texture2D" uid="uid://dxoqy5kvll8f6" path="res://asset/concept/rat.png" id="5_0kxny"]
+[ext_resource type="Texture2D" uid="uid://bqbgldu1l21tx" path="res://asset/concept/wasp.png" id="6_6ymvq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_82po7"]
 font = ExtResource("3_7xdm4")
@@ -26,3 +29,16 @@ offset_right = 1072.0
 offset_bottom = 283.0
 text = "Flycatcher"
 label_settings = SubResource("LabelSettings_82po7")
+
+[node name="Frog" type="Sprite2D" parent="." unique_id=47334350]
+position = Vector2(241, 477)
+texture = ExtResource("4_0ygtt")
+
+[node name="Rat" type="Sprite2D" parent="." unique_id=1883296796]
+position = Vector2(631, 484)
+texture = ExtResource("5_0kxny")
+
+[node name="Wasp" type="Sprite2D" parent="." unique_id=1350371045]
+position = Vector2(936, 391.00003)
+scale = Vector2(0.56814, 0.56814)
+texture = ExtResource("6_6ymvq")
