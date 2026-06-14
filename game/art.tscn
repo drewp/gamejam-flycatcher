@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cue0e4slma3fv"]
+
+[ext_resource type="Texture2D" uid="uid://c81xiragby42t" path="res://asset/ai-temp-do-not-use/dce7cf61-291b-4261-80a0-a05f99e2ed5d.jpeg" id="1_j8fdh"]
+[ext_resource type="Script" uid="uid://derhcfeggavhy" path="res://dce_7_cf_61291b_426180a_0a_05f_99e_2_ed_5d.gd" id="2_3k6nj"]
+[ext_resource type="FontFile" uid="uid://cwlpn0eph2i05" path="res://asset/font/Black_Ops_One/BlackOpsOne-Regular.ttf" id="3_7xdm4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_82po7"]
+font = ExtResource("3_7xdm4")
+font_size = 173
+font_color = Color(0.544, 0.85, 0.6205, 1)
+shadow_size = 59
+shadow_color = Color(0, 0.27450982, 0, 0.6117647)
+
+[node name="Node2D" type="Node2D" unique_id=548967489]
+
+[node name="Dce7Cf61291b426180a0A05f99e2Ed5d" type="Sprite2D" parent="." unique_id=1137421299]
+position = Vector2(666.093, 357.25)
+scale = Vector2(1.4767442, 1.4767442)
+texture = ExtResource("1_j8fdh")
+script = ExtResource("2_3k6nj")
+
+[node name="Label" type="Label" parent="." unique_id=625113171]
+offset_left = 58.0
+offset_top = 65.0
+offset_right = 1072.0
+offset_bottom = 283.0
+text = "Flycatcher"
+label_settings = SubResource("LabelSettings_82po7")
