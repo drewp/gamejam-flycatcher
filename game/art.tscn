@@ -35,10 +35,10 @@ position = Vector2(241, 477)
 texture = ExtResource("4_0ygtt")
 
 [node name="Rat" type="Sprite2D" parent="." unique_id=1883296796]
-position = Vector2(631, 484)
+position = Vector2(621, 468)
 texture = ExtResource("5_0kxny")
 
 [node name="Wasp" type="Sprite2D" parent="." unique_id=1350371045]
-position = Vector2(936, 391.00003)
+position = Vector2(976.00006, 411)
 scale = Vector2(0.56814, 0.56814)
 texture = ExtResource("6_6ymvq")
