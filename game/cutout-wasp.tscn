@@ -7,7 +7,8 @@
 metadata/_edit_vertical_guides_ = [-661.0, -859.0]
 
 [node name="wasp5body" type="Polygon2D" parent="." unique_id=795152922]
-position = Vector2(549, 311)
+position = Vector2(177.00006, 119.00006)
+scale = Vector2(0.6439525, 0.64395267)
 offset = Vector2(-737, -450)
 texture = ExtResource("1_q5eix")
 polygon = PackedVector2Array(670.07886, 373.15344, 513.7549, 688.97534, 959.7145, 697.7041, 799.423, 358.0765)
@@ -47,10 +48,16 @@ ampx = -2.0
 ampy = -6.0
 
 [node name="wasp3legs" type="Polygon2D" parent="wasp5body" unique_id=381712431]
-position = Vector2(-1105, -295)
+position = Vector2(25.601074, 15.227203)
+offset = Vector2(-1130.6011, -310.2272)
 texture = ExtResource("1_q5eix")
 polygon = PackedVector2Array(1105.7225, 158.9024, 1073.1881, 420.76477, 1219.9897, 455.67975, 1314.419, 189.84978)
 uv = PackedVector2Array(1105.7225, 158.9024, 1073.1881, 420.76477, 1219.9897, 455.67975, 1314.419, 189.84978)
+script = ExtResource("2_gok2e")
+periodsec = -0.03
+ampdeg = 10.0
+ampx = 12.0
+ampy = 0.875
 
 [node name="wasp2head" type="Polygon2D" parent="wasp5body" unique_id=1318414815]
 position = Vector2(23, -44)
@@ -60,6 +67,6 @@ polygon = PackedVector2Array(514.54834, 123.19391, 370.92087, 270.78906, 441.544
 uv = PackedVector2Array(514.54834, 123.19391, 370.92087, 270.78906, 441.54434, 350.9348, 648.6537, 246.18985, 728.79944, 225.55829, 706.5808, 160.48946, 558.9856, 104.14937)
 script = ExtResource("2_gok2e")
 periodsec = 0.6
-ampdeg = 20.0
-ampx = 0.0
-ampy = 0.0
+ampdeg = 0.0
+ampx = 2.0
+ampy = 1.0

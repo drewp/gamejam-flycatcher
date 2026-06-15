@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://psxql8g4pjgo"]
+
+[ext_resource type="Texture2D" uid="uid://c1f4jc6p5s4vi" path="res://e8e10e111ee4d02854e322b652872e29.svg" id="1_t4gw0"]
+[ext_resource type="PackedScene" uid="uid://biqeiqr352aoy" path="res://cutout-wasp.tscn" id="2_tuaf8"]
+
+[node name="Bg" type="Node2D" unique_id=946243218]
+
+[node name="E8e10e111Ee4d02854e322b652872e29" type="Sprite2D" parent="." unique_id=1698998414]
+position = Vector2(6.000001, -36.999992)
+scale = Vector2(0.58501995, 0.58502)
+texture = ExtResource("1_t4gw0")
+offset = Vector2(1426.1464, 563.3721)
+
+[node name="Cutout" parent="." unique_id=484918843 instance=ExtResource("2_tuaf8")]
+position = Vector2(-159, -98)
