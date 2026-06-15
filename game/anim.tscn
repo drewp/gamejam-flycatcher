@@ -65,7 +65,7 @@ _data = {
 [node name="Anim" type="Node2D" unique_id=596971473]
 
 [node name="Wasp" type="Sprite2D" parent="." unique_id=576057373]
-position = Vector2(457, 381)
+position = Vector2(567, 359)
 texture = ExtResource("1_vmnuw")
 
 [node name="nose" type="Sprite2D" parent="Wasp" unique_id=1462224921]
