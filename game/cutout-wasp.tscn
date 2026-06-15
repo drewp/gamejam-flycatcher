@@ -54,10 +54,11 @@ texture = ExtResource("1_q5eix")
 polygon = PackedVector2Array(1105.7225, 158.9024, 1073.1881, 420.76477, 1219.9897, 455.67975, 1314.419, 189.84978)
 uv = PackedVector2Array(1105.7225, 158.9024, 1073.1881, 420.76477, 1219.9897, 455.67975, 1314.419, 189.84978)
 script = ExtResource("2_gok2e")
-periodsec = -0.03
-ampdeg = 10.0
-ampx = 12.0
-ampy = 0.875
+periodsec = 0.6
+offsetsec = 0.3
+ampdeg = 0.0
+ampx = 0.0
+ampy = 4.0
 
 [node name="wasp2head" type="Polygon2D" parent="wasp5body" unique_id=1318414815]
 position = Vector2(23, -44)

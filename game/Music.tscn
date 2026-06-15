@@ -8,4 +8,3 @@
 position = Vector2(640, 847)
 stream = ExtResource("1_fw6bl")
 volume_db = 2.065
-autoplay = true
