@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://0mnw4ovq8b60"]
+
+[ext_resource type="AudioStream" uid="uid://b56y8qtqn51e7" path="res://asset/music/WaspqueenMusic.ogg" id="1_fw6bl"]
+
+[node name="Music" type="Node2D" unique_id=606270931]
+
+[node name="WaspqueenMusic" type="AudioStreamPlayer2D" parent="." unique_id=986786402]
+position = Vector2(640, 847)
+stream = ExtResource("1_fw6bl")
+volume_db = 2.065

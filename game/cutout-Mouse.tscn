@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://dj60uxl4jml0d"]
+
+[ext_resource type="Texture2D" uid="uid://csaqobxhdcji5" path="res://mouse.svg" id="1_ccrdw"]
+
+[node name="CutoutMouse" type="Node2D" unique_id=1231813829]
+position = Vector2(-216, -85)
+
+[node name="mouse2body" type="Polygon2D" parent="." unique_id=766690357]
+z_index = 5
+position = Vector2(-338, -180.99998)
+rotation = -0.0165841
+scale = Vector2(0.315, 0.315)
+texture = ExtResource("1_ccrdw")
+polygon = PackedVector2Array(2868.668, 981.3852, 2462.4468, 920.6418, 2158.73, 1019.3498, 2105.5796, 1250.9338, 2663.6592, 1277.509)
+uv = PackedVector2Array(2868.668, 981.3852, 2462.4468, 920.6418, 2158.73, 1019.3498, 2105.5796, 1250.9338, 2663.6592, 1277.509)
+
+[node name="head" type="Polygon2D" parent="mouse2body" unique_id=1798675279]
+position = Vector2(2170, 1113)
+rotation = -0.0035794736
+offset = Vector2(-2423, -623)
+texture = ExtResource("1_ccrdw")
+polygon = PackedVector2Array(2000.2598, 552.0251, 2224.0593, 307.2945, 2484.8906, 360.4268, 2641.0674, 421.60944, 2595.9856, 832.17725, 2063.0525, 828.95703)
+uv = PackedVector2Array(2000.2598, 552.0251, 2224.0593, 307.2945, 2484.8906, 360.4268, 2641.0674, 421.60944, 2595.9856, 832.17725, 2063.0525, 828.95703)
+
+[node name="foot1" type="Polygon2D" parent="mouse2body" unique_id=1408770851]
+position = Vector2(2196, 1181)
+offset = Vector2(-1623, -1233)
+texture = ExtResource("1_ccrdw")
+polygon = PackedVector2Array(1460.1812, 1224.3586, 1744.916, 1171.2083, 1733.5264, 1391.4028, 1395.6416, 1452.1462)
+uv = PackedVector2Array(1460.1812, 1224.3586, 1744.916, 1171.2083, 1733.5264, 1391.4028, 1395.6416, 1452.1462)
+
+[node name="foot2" type="Polygon2D" parent="mouse2body" unique_id=1738587852]
+show_behind_parent = true
+position = Vector2(2137, 1185)
+offset = Vector2(-1581, -993)
+texture = ExtResource("1_ccrdw")
+polygon = PackedVector2Array(1513.3315, 738.41174, 1350.084, 1140.8364, 1687.9688, 1140.8364, 1665.19, 776.37634)
+uv = PackedVector2Array(1513.3315, 738.41174, 1350.084, 1140.8364, 1687.9688, 1140.8364, 1665.19, 776.37634)
+
+[node name="foot3" type="Polygon2D" parent="mouse2body" unique_id=2046493895]
+position = Vector2(2486, 1180)
+offset = Vector2(-1900, -1221)
+texture = ExtResource("1_ccrdw")
+polygon = PackedVector2Array(1984.0928, 1178.801, 1767.6948, 1190.1904, 1839.8271, 1493.9072, 2116.9688, 1474.925)
+uv = PackedVector2Array(1984.0928, 1178.801, 1767.6948, 1190.1904, 1839.8271, 1493.9072, 2116.9688, 1474.925)
+
+[node name="foot4" type="Polygon2D" parent="mouse2body" unique_id=146896993]
+show_behind_parent = true
+position = Vector2(2565, 1170)
+offset = Vector2(-1902, -966)
+texture = ExtResource("1_ccrdw")
+polygon = PackedVector2Array(1725.9336, 856.102, 1824.6416, 1121.8542, 1999.2788, 1235.748, 2042.2422, 1125.0337, 2041.1738, 995.88245, 1867.4407, 806.59094)
+uv = PackedVector2Array(1725.9336, 856.102, 1824.6416, 1121.8542, 1999.2788, 1235.748, 2042.2422, 1125.0337, 2041.1738, 995.88245, 1867.4407, 806.59094)
+
+[node name="tail1" type="Polygon2D" parent="mouse2body" unique_id=550320278]
+position = Vector2(2667, 1042)
+offset = Vector2(-2216, -1461)
+texture = ExtResource("1_ccrdw")
+polygon = PackedVector2Array(2314.3848, 1364.8276, 2097.9868, 1448.3499, 2227.0664, 1528.0754, 2401.7036, 1474.925)
+uv = PackedVector2Array(2314.3848, 1364.8276, 2097.9868, 1448.3499, 2227.0664, 1528.0754, 2401.7036, 1474.925)
+
+[node name="tail2" type="Polygon2D" parent="mouse2body/tail1" unique_id=1395761628]
+position = Vector2(87, 14)
+offset = Vector2(-2274, -1545)
+texture = ExtResource("1_ccrdw")
+polygon = PackedVector2Array(2439.668, 1478.7214, 2075.208, 1554.6506, 2223.27, 1626.7834, 2470.0396, 1562.2437)
+uv = PackedVector2Array(2439.668, 1478.7214, 2075.208, 1554.6506, 2223.27, 1626.7834, 2470.0396, 1562.2437)
+
+[node name="tail3" type="Polygon2D" parent="mouse2body/tail1/tail2" unique_id=698731499]
+position = Vector2(109, -19)
+offset = Vector2(-2367, -1639)
+texture = ExtResource("1_ccrdw")
+polygon = PackedVector2Array(2526.9846, 1516.6849, 2238.4539, 1641.9681, 2291.6042, 1687.5256, 2618.0999, 1630.5787)
+uv = PackedVector2Array(2526.9846, 1516.6849, 2238.4539, 1641.9681, 2291.6042, 1687.5256, 2618.0999, 1630.5787)
+
+[node name="tali4" type="Polygon2D" parent="mouse2body/tail1/tail2/tail3" unique_id=747091611]
+position = Vector2(110, -20)
+offset = Vector2(-2482, -1715)
+texture = ExtResource("1_ccrdw")
+polygon = PackedVector2Array(2686.438, 1630.5798, 2333.3672, 1706.509, 2545.9688, 1744.4736, 2777.5532, 1736.8809)
+uv = PackedVector2Array(2686.438, 1630.5798, 2333.3672, 1706.509, 2545.9688, 1744.4736, 2777.5532, 1736.8809)

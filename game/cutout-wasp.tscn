@@ -4,33 +4,61 @@
 [ext_resource type="Script" uid="uid://swypbf3qgd8o" path="res://wiggle.gd" id="2_gok2e"]
 
 [node name="Cutout" type="Node2D" unique_id=484918843]
+metadata/_edit_vertical_guides_ = [-661.0, -859.0]
 
 [node name="wasp5body" type="Polygon2D" parent="." unique_id=795152922]
-position = Vector2(549, 311)
+position = Vector2(177.00006, 119.00006)
+scale = Vector2(0.6439525, 0.64395267)
 offset = Vector2(-737, -450)
 texture = ExtResource("1_q5eix")
 polygon = PackedVector2Array(670.07886, 373.15344, 513.7549, 688.97534, 959.7145, 697.7041, 799.423, 358.0765)
 uv = PackedVector2Array(670.07886, 373.15344, 513.7549, 688.97534, 959.7145, 697.7041, 799.423, 358.0765)
 script = ExtResource("2_gok2e")
+periodsec = 0.6
+offsetsec = 0.3
+ampdeg = 0.0
+ampx = 0.0
+ampy = 5.0
 
 [node name="wasp1wing_far" type="Polygon2D" parent="wasp5body" unique_id=656198280]
-position = Vector2(-225, -152)
+position = Vector2(-15, -42)
+offset = Vector2(-210, -110)
 texture = ExtResource("1_q5eix")
 polygon = PackedVector2Array(-24.248718, -10.990143, 91.70801, -33.244465, 310.73737, 103.79531, 204.15088, 239.66379, 19.088623, 165.87317)
 uv = PackedVector2Array(-24.248718, -10.990143, 91.70801, -33.244465, 310.73737, 103.79531, 204.15088, 239.66379, 19.088623, 165.87317)
+script = ExtResource("2_gok2e")
+periodsec = 0.6
+offsetsec = 6.0
+offsetdeg = 10.0
+ampdeg = -20.0
+ampx = 6.0
+ampy = 8.0
 
 [node name="wasp4wing_near" type="Polygon2D" parent="wasp5body" unique_id=471439182]
-position = Vector2(4, -34)
+position = Vector2(-22, -12)
+rotation = 0.038632903
 offset = Vector2(-396, -526)
 texture = ExtResource("1_q5eix")
 polygon = PackedVector2Array(230.46744, 378.7081, 455.0342, 508.05222, 382.03018, 646.91864, 135.24472, 534.23846)
 uv = PackedVector2Array(230.46744, 378.7081, 455.0342, 508.05222, 382.03018, 646.91864, 135.24472, 534.23846)
+script = ExtResource("2_gok2e")
+periodsec = 0.6
+ampdeg = -20.0
+ampx = -2.0
+ampy = -6.0
 
 [node name="wasp3legs" type="Polygon2D" parent="wasp5body" unique_id=381712431]
-position = Vector2(-1105, -295)
+position = Vector2(25.601074, 15.227203)
+offset = Vector2(-1130.6011, -310.2272)
 texture = ExtResource("1_q5eix")
 polygon = PackedVector2Array(1105.7225, 158.9024, 1073.1881, 420.76477, 1219.9897, 455.67975, 1314.419, 189.84978)
 uv = PackedVector2Array(1105.7225, 158.9024, 1073.1881, 420.76477, 1219.9897, 455.67975, 1314.419, 189.84978)
+script = ExtResource("2_gok2e")
+periodsec = 0.6
+offsetsec = 0.3
+ampdeg = 0.0
+ampx = 0.0
+ampy = 4.0
 
 [node name="wasp2head" type="Polygon2D" parent="wasp5body" unique_id=1318414815]
 position = Vector2(23, -44)
@@ -38,3 +66,8 @@ offset = Vector2(-464, -249)
 texture = ExtResource("1_q5eix")
 polygon = PackedVector2Array(514.54834, 123.19391, 370.92087, 270.78906, 441.54434, 350.9348, 648.6537, 246.18985, 728.79944, 225.55829, 706.5808, 160.48946, 558.9856, 104.14937)
 uv = PackedVector2Array(514.54834, 123.19391, 370.92087, 270.78906, 441.54434, 350.9348, 648.6537, 246.18985, 728.79944, 225.55829, 706.5808, 160.48946, 558.9856, 104.14937)
+script = ExtResource("2_gok2e")
+periodsec = 0.6
+ampdeg = 0.0
+ampx = 2.0
+ampy = 1.0
