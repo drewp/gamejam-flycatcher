@@ -12,6 +12,8 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	if periodsec ==0.0:
+		return
 	var now = Time.get_unix_time_from_system() 
 	var ang = (PI*2)*(now+offsetsec)/periodsec
 	rotation_degrees = offsetdeg + ampdeg * sin(ang)
