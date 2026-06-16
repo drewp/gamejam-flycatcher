@@ -7,7 +7,8 @@
 [ext_resource type="Script" uid="uid://c74g100fxvy8t" path="res://mouse_char.gd" id="4_plmvg"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iq1of"]
-distance = -914.8017
+normal = Vector2(0.010908445, -0.9999405)
+distance = -902.44
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_36ycx"]
 normal = Vector2(1, 0)
@@ -18,8 +19,8 @@ normal = Vector2(-0.9999924, 0.0039215465)
 distance = -1820.557
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iq1of"]
-radius = 86.0
-height = 307.99994
+radius = 67.0
+height = 290.0
 
 [node name="Bg" type="Node2D" unique_id=946243218]
 
@@ -34,7 +35,7 @@ offset = Vector2(1426.1464, 563.3721)
 [node name="StaticBody2Dgnd" type="StaticBody2D" parent="walls-and-floor-coll" unique_id=1333550809]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="walls-and-floor-coll/StaticBody2Dgnd" unique_id=1859274279]
-position = Vector2(6.000001, -36.999992)
+position = Vector2(7.0000005, -36.999992)
 scale = Vector2(0.58501995, 0.58502)
 shape = SubResource("WorldBoundaryShape2D_iq1of")
 
@@ -64,6 +65,7 @@ position = Vector2(640, 423)
 script = ExtResource("4_plmvg")
 
 [node name="CutoutMouse" parent="mouse-char" unique_id=1231813829 instance=ExtResource("3_iq1of")]
+scale = Vector2(0.85, 0.85)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mouse-char" unique_id=933160405]
 position = Vector2(-18, -68)
