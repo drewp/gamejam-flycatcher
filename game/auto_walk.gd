@@ -13,8 +13,6 @@ func _physics_process(delta: float) -> void:
 	var speed = analyze_motion(delta)
 	smoothed_speed = lerp(smoothed_speed, speed, .9)
 
-	print(speed, ' ', smoothed_speed)
-
 	var ampdeg = 0
 	var per = 0
 

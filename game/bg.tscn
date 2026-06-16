@@ -24,7 +24,6 @@ height = 307.99994
 [node name="Bg" type="Node2D" unique_id=946243218]
 
 [node name="honey-cave" type="Sprite2D" parent="." unique_id=1698998414]
-modulate = Color(0.4075654, 0.40756536, 0.40756533, 1)
 position = Vector2(6.000001, -36.999992)
 scale = Vector2(0.58501995, 0.58502)
 texture = ExtResource("1_t4gw0")
