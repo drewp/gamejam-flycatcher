@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cxvji6t2iepg8"]
+
+[ext_resource type="PackedScene" uid="uid://dj60uxl4jml0d" path="res://cutout-Mouse.tscn" id="1_125cv"]
+[ext_resource type="Script" uid="uid://i0bw46tfhfk7" path="res://mousewalker.gd" id="2_rm3bw"]
+
+[node name="Mousewalker" type="Node2D" unique_id=1539408068]
+
+[node name="CutoutMouse" parent="." unique_id=1231813829 instance=ExtResource("1_125cv")]
+unique_name_in_owner = true
+position = Vector2(212, 421)
+
+[node name="mousewalker2" type="Node2D" parent="." unique_id=80440918]
+position = Vector2(212, 421)
+script = ExtResource("2_rm3bw")
+DURATION = 3.0
