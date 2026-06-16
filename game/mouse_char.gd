@@ -26,3 +26,9 @@ func _physics_process(delta: float) -> void:
 			
 
 	move_and_slide()
+	var WaspBody=get_node("%CutoutWasp").get_node("%Wasp3Body")
+	WaspBody.ampdeg = 0
+	for i in get_slide_collision_count():
+		var name=(get_slide_collision(i).get_collider().name)
+		if name =="WaspBody":
+			WaspBody.ampdeg = 50

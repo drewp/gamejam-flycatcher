@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://vehxp48e3c3u"]
+
+[ext_resource type="Texture2D" uid="uid://ndaxcxyjy4hd" path="res://Attackacid.svg" id="1_b673o"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b673o"]
+load_path = "res://.godot/imported/Attackacid.svg-f0ff72a87c86dfe85a081327dd1b5b5f.ctex"
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_b673o"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wsjsx"]
+distance = -628.0
+
+[node name="AttackAcid" type="Node2D" unique_id=2087837126]
+
+[node name="Polygon2D4" type="Polygon2D" parent="." unique_id=548926010]
+position = Vector2(1860, 935)
+texture = ExtResource("1_b673o")
+polygon = PackedVector2Array(1932.8276, 1194.2983, 1926.0884, 1362.7808, 1514.991, 1457.1311, 1461.0767, 1231.3645)
+uv = PackedVector2Array(1932.8276, 1194.2983, 1926.0884, 1362.7808, 1514.991, 1457.1311, 1461.0767, 1231.3645)
+
+[node name="Polygon2D5" type="Polygon2D" parent="." unique_id=801830602]
+position = Vector2(2403, 572)
+texture = ExtResource("1_b673o")
+polygon = PackedVector2Array(1932.8276, 1194.2983, 1926.0884, 1362.7808, 1514.991, 1457.1311, 1461.0767, 1231.3645)
+uv = PackedVector2Array(1932.8276, 1194.2983, 1926.0884, 1362.7808, 1514.991, 1457.1311, 1461.0767, 1231.3645)
+
+[node name="Polygon2D6" type="Polygon2D" parent="." unique_id=1935616824]
+position = Vector2(2251, 317)
+texture = ExtResource("1_b673o")
+polygon = PackedVector2Array(1932.8276, 1194.2983, 1926.0884, 1362.7808, 1514.991, 1457.1311, 1461.0767, 1231.3645)
+uv = PackedVector2Array(1932.8276, 1194.2983, 1926.0884, 1362.7808, 1514.991, 1457.1311, 1461.0767, 1231.3645)
+
+[node name="Polygon2D2" type="Polygon2D" parent="." unique_id=981325029]
+position = Vector2(-251, 675)
+texture = ExtResource("1_b673o")
+polygon = PackedVector2Array(1932.8276, 1194.2983, 1926.0884, 1362.7808, 1514.991, 1457.1311, 1461.0767, 1231.3645)
+uv = PackedVector2Array(1932.8276, 1194.2983, 1926.0884, 1362.7808, 1514.991, 1457.1311, 1461.0767, 1231.3645)
+
+[node name="Polygon2D3" type="Polygon2D" parent="." unique_id=1810113540]
+position = Vector2(2924, 1755)
+rotation = -0.0024874434
+texture = ExtResource("1_b673o")
+polygon = PackedVector2Array(1932.8276, 1194.2983, 1926.0884, 1362.7808, 1514.991, 1457.1311, 1461.0767, 1231.3645)
+uv = PackedVector2Array(1932.8276, 1194.2983, 1926.0884, 1362.7808, 1514.991, 1457.1311, 1461.0767, 1231.3645)
+
+[node name="Polygon2D7" type="Polygon2D" parent="." unique_id=1442440148]
+position = Vector2(1252, 800)
+texture = ExtResource("1_b673o")
+polygon = PackedVector2Array(1932.8276, 1194.2983, 1926.0884, 1362.7808, 1514.991, 1457.1311, 1461.0767, 1231.3645)
+uv = PackedVector2Array(1932.8276, 1194.2983, 1926.0884, 1362.7808, 1514.991, 1457.1311, 1461.0767, 1231.3645)
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=918621195]
+position = Vector2(677, 246)
+texture = ExtResource("1_b673o")
+polygon = PackedVector2Array(1932.8276, 1194.2983, 1926.0884, 1362.7808, 1514.991, 1457.1311, 1461.0767, 1231.3645)
+uv = PackedVector2Array(1932.8276, 1194.2983, 1926.0884, 1362.7808, 1514.991, 1457.1311, 1461.0767, 1231.3645)
+
+[node name="Particles2D" type="GPUParticles2D" parent="." unique_id=200877297]
+amount = 2
+texture = SubResource("CompressedTexture2D_b673o")
+lifetime = 6.89
+collision_base_size = 5.38
+process_material = SubResource("ParticleProcessMaterial_b673o")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1735229573]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1153893912]
+position = Vector2(-1632, 1576)
+shape = SubResource("WorldBoundaryShape2D_wsjsx")
