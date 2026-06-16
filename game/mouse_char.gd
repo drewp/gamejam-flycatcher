@@ -20,7 +20,7 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		velocity.x = direction * SPEED
 	else:
-		velocity.x *= (1.0 - 1.5*delta)
+		velocity.x *= (.9)
 		if abs(velocity.x) < 0.001:
 			velocity.x = 0
 			
