@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dj60uxl4jml0d" path="res://cutout-Mouse.tscn" id="3_iq1of"]
 [ext_resource type="PackedScene" uid="uid://dsk3c1wtadsoi" path="res://cutout-Frog.tscn" id="4_36ycx"]
 [ext_resource type="Script" uid="uid://c74g100fxvy8t" path="res://mouse_char.gd" id="4_plmvg"]
+[ext_resource type="Texture2D" uid="uid://caojy3t8ftvou" path="res://icon.svg" id="6_plmvg"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iq1of"]
 normal = Vector2(0.010908445, -0.9999405)
@@ -22,11 +23,15 @@ distance = -1820.557
 radius = 67.0
 height = 287.99994
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7sudn"]
+radius = 76.0
+height = 170.0
+
 [node name="Bg" type="Node2D" unique_id=946243218]
 
 [node name="honey-cave" type="Sprite2D" parent="." unique_id=1698998414]
 modulate = Color(0.37413925, 0.37413928, 0.37413922, 1)
-position = Vector2(6.000001, -36.999992)
+position = Vector2(14, -36.000004)
 scale = Vector2(0.58501995, 0.58502)
 texture = ExtResource("1_t4gw0")
 offset = Vector2(1426.1464, 563.3721)
@@ -73,3 +78,12 @@ scale = Vector2(0.85, 0.85)
 position = Vector2(-18, -68)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_iq1of")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1078795108]
+position = Vector2(883, 323)
+texture = ExtResource("6_plmvg")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=1804315421]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=1818487229]
+shape = SubResource("CapsuleShape2D_7sudn")
