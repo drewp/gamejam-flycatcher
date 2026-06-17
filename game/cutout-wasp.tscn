@@ -77,8 +77,8 @@ ampdeg = 0.0
 ampx = 2.0
 ampy = 1.0
 
-[node name="WaspBody" type="AnimatableBody2D" parent="." unique_id=1609321645]
+[node name="Area" type="Area2D" parent="." unique_id=214504845]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WaspBody" unique_id=1082681409]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area" unique_id=1082681409]
 position = Vector2(147, 146)
 shape = SubResource("CapsuleShape2D_gok2e")
