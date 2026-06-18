@@ -1,15 +1,28 @@
 [gd_scene format=3 uid="uid://dj60uxl4jml0d"]
 
 [ext_resource type="Texture2D" uid="uid://csaqobxhdcji5" path="res://mouse.svg" id="1_ccrdw"]
+[ext_resource type="Script" uid="uid://c74g100fxvy8t" path="res://mouse_char.gd" id="1_fmtyt"]
 [ext_resource type="Script" uid="uid://gunbcwmogy7s" path="res://auto_walk.gd" id="2_fmtyt"]
 [ext_resource type="Script" uid="uid://swypbf3qgd8o" path="res://wiggle.gd" id="2_m7dut"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rrixd"]
+radius = 82.53967
+height = 412.6984
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fmtyt"]
+radius = 67.0
+height = 287.99994
+
 [node name="CutoutMouse" type="Node2D" unique_id=1231813829]
 
-[node name="mouse_body" type="Polygon2D" parent="." unique_id=766690357]
+[node name="mouse-char" type="CharacterBody2D" parent="." unique_id=773421472]
+position = Vector2(640, 423)
+script = ExtResource("1_fmtyt")
+
+[node name="mouse_body" type="Polygon2D" parent="mouse-char" unique_id=766690357]
 unique_name_in_owner = true
 z_index = 5
-position = Vector2(6.1035156e-05, 6.1035156e-05)
+position = Vector2(-639.99994, -422.99994)
 scale = Vector2(0.315, 0.315)
 offset = Vector2(-2384.127, -1361.9047)
 texture = ExtResource("1_ccrdw")
@@ -17,7 +30,7 @@ polygon = PackedVector2Array(2596.467, 906.5562, 2145.353, 986.97766, 2137.8135,
 uv = PackedVector2Array(2596.467, 906.5562, 2145.353, 986.97766, 2137.8135, 1226.9855, 2572.592, 1219.4459, 2669.349, 1118.9191, 2661.4106, 946.718)
 script = ExtResource("2_fmtyt")
 
-[node name="head" type="Polygon2D" parent="mouse_body" unique_id=1798675279]
+[node name="head" type="Polygon2D" parent="mouse-char/mouse_body" unique_id=1798675279]
 position = Vector2(-231.64514, -267.90356)
 rotation = -0.16951638
 offset = Vector2(-2423, -623)
@@ -26,7 +39,7 @@ polygon = PackedVector2Array(2000.2598, 552.0251, 2224.0593, 307.2945, 2484.8906
 uv = PackedVector2Array(2000.2598, 552.0251, 2224.0593, 307.2945, 2484.8906, 360.4268, 2641.0674, 421.60944, 2595.9856, 832.17725, 2063.0525, 828.95703)
 script = ExtResource("2_m7dut")
 
-[node name="foot1" type="Polygon2D" parent="mouse_body" unique_id=1408770851]
+[node name="foot1" type="Polygon2D" parent="mouse-char/mouse_body" unique_id=1408770851]
 position = Vector2(-195.93225, -190.19067)
 rotation = -0.097077966
 offset = Vector2(-1623, -1233)
@@ -39,7 +52,7 @@ offsetsec = 0.3
 ampx = 0.0
 ampy = 0.0
 
-[node name="foot2" type="Polygon2D" parent="mouse_body" unique_id=1738587852]
+[node name="foot2" type="Polygon2D" parent="mouse-char/mouse_body" unique_id=1738587852]
 show_behind_parent = true
 position = Vector2(-254.93298, -186.19073)
 rotation = 0.09707549
@@ -52,7 +65,7 @@ periodsec = 0.6
 ampx = 0.0
 ampy = 0.0
 
-[node name="foot3" type="Polygon2D" parent="mouse_body" unique_id=2046493895]
+[node name="foot3" type="Polygon2D" parent="mouse-char/mouse_body" unique_id=2046493895]
 position = Vector2(64.543945, -162.034)
 rotation = 0.09707178
 offset = Vector2(-1900, -1221)
@@ -64,7 +77,7 @@ periodsec = 0.6
 ampx = 0.0
 ampy = 0.0
 
-[node name="foot4" type="Polygon2D" parent="mouse_body" unique_id=146896993]
+[node name="foot4" type="Polygon2D" parent="mouse-char/mouse_body" unique_id=146896993]
 show_behind_parent = true
 position = Vector2(173.06746, -201.19092)
 rotation = -0.097070545
@@ -79,7 +92,7 @@ offsetsec = 0.3
 ampx = 0.0
 ampy = 0.0
 
-[node name="tail1" type="Polygon2D" parent="mouse_body" unique_id=550320278]
+[node name="tail1" type="Polygon2D" parent="mouse-char/mouse_body" unique_id=550320278]
 position = Vector2(275.06754, -329.19067)
 rotation = -0.07475648
 offset = Vector2(-2216, -1461)
@@ -92,7 +105,7 @@ ampdeg = 5.0
 ampx = 0.0
 ampy = 0.0
 
-[node name="tail2" type="Polygon2D" parent="mouse_body/tail1" unique_id=1395761628]
+[node name="tail2" type="Polygon2D" parent="mouse-char/mouse_body/tail1" unique_id=1395761628]
 position = Vector2(87, 14)
 rotation = -0.065918684
 offset = Vector2(-2274, -1545)
@@ -106,7 +119,7 @@ ampdeg = -5.0
 ampx = 0.0
 ampy = 0.0
 
-[node name="tail3" type="Polygon2D" parent="mouse_body/tail1/tail2" unique_id=698731499]
+[node name="tail3" type="Polygon2D" parent="mouse-char/mouse_body/tail1/tail2" unique_id=698731499]
 position = Vector2(109, -19)
 rotation = -0.074756734
 offset = Vector2(-2367, -1639)
@@ -119,7 +132,7 @@ ampdeg = 5.0
 ampx = 0.0
 ampy = 0.0
 
-[node name="tali4" type="Polygon2D" parent="mouse_body/tail1/tail2/tail3" unique_id=747091611]
+[node name="tali4" type="Polygon2D" parent="mouse-char/mouse_body/tail1/tail2/tail3" unique_id=747091611]
 position = Vector2(110, -20)
 rotation = 0.019715598
 offset = Vector2(-2482, -1715)
@@ -132,3 +145,18 @@ offsetsec = 0.3
 ampdeg = -5.0
 ampx = 0.0
 ampy = 0.0
+
+[node name="mouse_area" type="Area2D" parent="mouse-char/mouse_body" unique_id=1767605685]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mouse-char/mouse_body/mouse_area" unique_id=703022853]
+position = Vector2(-273.01605, -247.61923)
+shape = SubResource("CapsuleShape2D_rrixd")
+debug_color = Color(0.5956389, 0.43504757, 0.85224444, 0.41960785)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mouse-char" unique_id=1484460862]
+position = Vector2(-662, -494)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_fmtyt")
+
+[connection signal="area_entered" from="mouse-char/mouse_body/mouse_area" to="mouse-char" method="_on_mouse_area_area_entered"]
+[connection signal="area_exited" from="mouse-char/mouse_body/mouse_area" to="mouse-char" method="_on_mouse_area_area_exited"]
