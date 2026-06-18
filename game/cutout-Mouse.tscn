@@ -6,8 +6,8 @@
 [ext_resource type="Script" uid="uid://swypbf3qgd8o" path="res://wiggle.gd" id="2_m7dut"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rrixd"]
-radius = 82.53967
-height = 412.6984
+radius = 50.564697
+height = 286.97186
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fmtyt"]
 radius = 67.0
@@ -149,12 +149,13 @@ ampy = 0.0
 [node name="mouse_area" type="Area2D" parent="mouse-char/mouse_body" unique_id=1767605685]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mouse-char/mouse_body/mouse_area" unique_id=703022853]
-position = Vector2(-273.01605, -247.61923)
+position = Vector2(-50.79384, -234.9209)
+rotation = 1.5589596
 shape = SubResource("CapsuleShape2D_rrixd")
 debug_color = Color(0.5956389, 0.43504757, 0.85224444, 0.41960785)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mouse-char" unique_id=1484460862]
-position = Vector2(-662, -494)
+position = Vector2(-671, -501)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_fmtyt")
 
