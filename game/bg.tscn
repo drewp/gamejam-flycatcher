@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dsk3c1wtadsoi" path="res://cutout-Frog.tscn" id="4_36ycx"]
 [ext_resource type="Script" uid="uid://c74g100fxvy8t" path="res://mouse_char.gd" id="4_plmvg"]
 [ext_resource type="Texture2D" uid="uid://caojy3t8ftvou" path="res://icon.svg" id="6_plmvg"]
+[ext_resource type="PackedScene" uid="uid://dw8osxyfypq03" path="res://Attack-Wasp.tscn" id="7_7sudn"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iq1of"]
 normal = Vector2(0.010908445, -0.9999405)
@@ -26,6 +27,43 @@ height = 287.99994
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7sudn"]
 radius = 76.0
 height = 170.0
+
+[sub_resource type="Animation" id="Animation_b16yh"]
+length = 3.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AttackWasp:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.03, 3.0333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(407, 14), Vector2(407, 14), Vector2(407, 470)]
+}
+
+[sub_resource type="Animation" id="Animation_twoho"]
+resource_name = "Tail_Fall"
+length = 2.1666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AttackWasp:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.08, 2.1666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(556, 47), Vector2(556, 47), Vector2(556, 450)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pi0n5"]
+_data = {
+&"RESET": SubResource("Animation_b16yh"),
+&"Tail_Fall": SubResource("Animation_twoho")
+}
 
 [node name="Bg" type="Node2D" unique_id=946243218]
 
@@ -87,3 +125,11 @@ texture = ExtResource("6_plmvg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=1818487229]
 shape = SubResource("CapsuleShape2D_7sudn")
+
+[node name="AttackWasp" parent="." unique_id=1625224757 instance=ExtResource("7_7sudn")]
+position = Vector2(407, 14)
+rotation = 1.1955506
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AttackWasp" unique_id=1208426974]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_pi0n5")

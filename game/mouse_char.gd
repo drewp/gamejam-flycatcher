@@ -35,8 +35,7 @@ func _physics_process(delta: float) -> void:
 		if i.name == "wasparea":
 
 			if wasp_hit_time == 0.0:
-				wasp_hit_time = now
-	else:
+				wasp_hit_time = now 
 		if wasp_hit_time > 0.0 and now > wasp_hit_time + 2.0:
 			wasp_hit_time = 0.0
 	if wasp_hit_time > 0.0 and now > wasp_hit_time + 0.5:
