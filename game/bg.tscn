@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://biqeiqr352aoy" path="res://cutout-wasp.tscn" id="2_tuaf8"]
 [ext_resource type="PackedScene" uid="uid://dj60uxl4jml0d" path="res://cutout-Mouse.tscn" id="3_iq1of"]
 [ext_resource type="PackedScene" uid="uid://dsk3c1wtadsoi" path="res://cutout-Frog.tscn" id="4_36ycx"]
-[ext_resource type="Script" uid="uid://c74g100fxvy8t" path="res://mouse_char.gd" id="4_plmvg"]
 [ext_resource type="Texture2D" uid="uid://caojy3t8ftvou" path="res://icon.svg" id="6_plmvg"]
 [ext_resource type="PackedScene" uid="uid://dw8osxyfypq03" path="res://Attack-Wasp.tscn" id="7_7sudn"]
 
@@ -19,10 +18,6 @@ distance = 113.42
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_plmvg"]
 normal = Vector2(-0.9999924, 0.0039215465)
 distance = -1820.557
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iq1of"]
-radius = 67.0
-height = 287.99994
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7sudn"]
 radius = 76.0
@@ -105,25 +100,16 @@ position = Vector2(89, 165)
 position = Vector2(831, 316)
 scale = Vector2(0.23, 0.23)
 
-[node name="mouse-char" type="CharacterBody2D" parent="." unique_id=585711537]
-position = Vector2(640, 423)
-script = ExtResource("4_plmvg")
-
-[node name="CutoutMouse" parent="mouse-char" unique_id=1231813829 instance=ExtResource("3_iq1of")]
-scale = Vector2(0.85, 0.85)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="mouse-char" unique_id=933160405]
-position = Vector2(-18, -68)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_iq1of")
+[node name="CutoutMouse" parent="." unique_id=1231813829 instance=ExtResource("3_iq1of")]
+position = Vector2(633, 333)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1078795108]
 position = Vector2(883, 323)
 texture = ExtResource("6_plmvg")
 
-[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=1804315421]
+[node name="robot" type="Area2D" parent="Sprite2D" unique_id=1804315421]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=1818487229]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/robot" unique_id=1818487229]
 shape = SubResource("CapsuleShape2D_7sudn")
 
 [node name="AttackWasp" parent="." unique_id=1625224757 instance=ExtResource("7_7sudn")]

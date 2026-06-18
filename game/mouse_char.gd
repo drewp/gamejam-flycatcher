@@ -5,8 +5,13 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 var wasp_hit_time = 0.0
+var wasp_leave_time = 0.0
+
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+	char_movement(delta)
+	touches()
+
+func char_movement(delta: float):
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
@@ -26,19 +31,38 @@ func _physics_process(delta: float) -> void:
 			
 
 	move_and_slide()
-	var Area=get_node("%CutoutWasp").get_node("Area") as Area2D
-	var body=get_node("%CutoutWasp").get_node("%Wasp3Body")
-	body.get_node("wasp3legs").ampdeg = 0
-	body.get_node("wasp3legs").periodsec = 0
-	var now = Time.get_unix_time_from_system()
-	for i in Area.get_overlapping_bodies():
-		if i.name == "wasparea":
 
-			if wasp_hit_time == 0.0:
-				wasp_hit_time = now 
-		if wasp_hit_time > 0.0 and now > wasp_hit_time + 2.0:
-			wasp_hit_time = 0.0
-	if wasp_hit_time > 0.0 and now > wasp_hit_time + 0.5:
-		body.get_node("wasp3legs").ampdeg = 15
-		body.get_node("wasp3legs").periodsec = 0.3
+func touches():
+	var body = get_parent().get_node("/root/Bg/CutoutWasp")
+	body.set_meta('phase', 'ready')
+	var now = Time.get_unix_time_from_system()
 	
+	if wasp_hit_time > 0.0 and now > wasp_hit_time + 0.5:
+		body.set_meta('phase', 'mad')
+
+	if wasp_hit_time > 0.0 and now > wasp_hit_time + 2.0:
+		deadly_item_touching_mouse()
+
+	if wasp_leave_time > 0.0 and now > wasp_leave_time + 4.0:
+		wasp_leave_time = 0.0
+		wasp_hit_time = 0.0
+
+
+func deadly_item_touching_mouse():
+	get_tree().reload_current_scene()
+
+
+func _on_mouse_area_area_entered(area: Area2D) -> void:
+	var now = Time.get_unix_time_from_system()
+	if area.name == "wasp_area":
+		wasp_hit_time = now
+		wasp_leave_time = 0.0
+
+
+func _on_mouse_area_area_exited(area: Area2D) -> void:
+	var now = Time.get_unix_time_from_system()
+	if area.name == "wasp_area":
+		wasp_hit_time = 0.0
+		wasp_leave_time = now
+	elif area.name == "robot":
+		deadly_item_touching_mouse()
