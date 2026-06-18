@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://pqf1uv8vw776"]
+
+[ext_resource type="Texture2D" uid="uid://dta3071c7174a" path="res://29624badf33894f1da505a5b6e82e9f5.svg" id="1_4qwwl"]
+[ext_resource type="FontFile" uid="uid://cwlpn0eph2i05" path="res://asset/font/Black_Ops_One/BlackOpsOne-Regular.ttf" id="2_obosj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_k2yj5"]
+font = ExtResource("2_obosj")
+font_size = 38
+font_color = Color(1, 0.4429984, 0.5518839, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Credits" type="Node2D" unique_id=116653384]
+
+[node name="29624Badf33894f1Da505a5b6e82e9f5" type="Sprite2D" parent="." unique_id=916825314]
+position = Vector2(660, 497)
+scale = Vector2(2.7124352, 2.7124352)
+texture = ExtResource("1_4qwwl")
+
+[node name="Label" type="Label" parent="." unique_id=1123101927]
+offset_left = 94.0
+offset_top = 115.0
+offset_right = 1498.8323
+offset_bottom = 810.0
+text = "       I, AsherP (10) and my dad DrewP (47), put our 
+work in to this game. I created the music and 
+assets, while he did most of the code. We are 
+competing against my brother, Arrowira who 
+made a game where monkeys swing eachother 
+on a rope and try to break all of the enemies.
+       If you have ever played Hollow Knight, you'd 
+probably find something in this similar to it's 
+bosses."
+label_settings = SubResource("LabelSettings_k2yj5")
