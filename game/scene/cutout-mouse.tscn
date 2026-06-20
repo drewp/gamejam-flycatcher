@@ -6,12 +6,13 @@
 [ext_resource type="Script" uid="uid://swypbf3qgd8o" path="res://wiggle.gd" id="2_m7dut"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fmtyt"]
-radius = 67.0
+radius = 42.0
 height = 287.99994
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rrixd"]
-radius = 50.564697
-height = 286.97186
+resource_name = "mousecap"
+radius = 139.6352
+height = 902.2005
 
 [node name="CutoutMouse" type="Node2D" unique_id=1231813829]
 
@@ -21,7 +22,7 @@ position = Vector2(640, 423)
 script = ExtResource("1_fmtyt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mouse-char" unique_id=1484460862]
-position = Vector2(-671, -501)
+position = Vector2(-671, -480)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_fmtyt")
 
@@ -157,7 +158,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mouse-char/mouse_body/area" unique_id=703022853]
-position = Vector2(-50.79384, -234.9209)
+position = Vector2(-98.41289, -177.77797)
 rotation = 1.5589596
 shape = SubResource("CapsuleShape2D_rrixd")
 debug_color = Color(0.5956389, 0.43504757, 0.85224444, 0.41960785)

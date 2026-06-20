@@ -91,3 +91,11 @@ scale = Vector2(0.99999994, 0.99999994)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wasp-char/area" unique_id=1082681409]
 position = Vector2(147, 146)
 shape = SubResource("CapsuleShape2D_gok2e")
+
+[node name="debug" type="Label" parent="wasp-char" unique_id=2006865132]
+offset_left = 104.0
+offset_top = 19.0
+offset_right = 153.0
+offset_bottom = 68.0
+text = "debug
+"

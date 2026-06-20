@@ -1,12 +1,19 @@
 [gd_scene format=3 uid="uid://dsk3c1wtadsoi"]
 
 [ext_resource type="Texture2D" uid="uid://dngnqluhs4fi7" path="res://asset/art/Frogimg.svg" id="1_0xrb8"]
+[ext_resource type="Script" uid="uid://dgc1kcgyeqxf1" path="res://frog_char.gd" id="1_oa3qs"]
 [ext_resource type="Script" uid="uid://swypbf3qgd8o" path="res://wiggle.gd" id="2_1p52q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_edtqt"]
+radius = 418.34
 
 [node name="CutoutFrog" type="Node2D" unique_id=182426940]
 
-[node name="frog-char" type="Node2D" parent="." unique_id=1717195958]
+[node name="frog-char" type="CharacterBody2D" parent="." unique_id=1021966369]
 unique_name_in_owner = true
+collision_layer = 5
+collision_mask = 5
+script = ExtResource("1_oa3qs")
 
 [node name="body" type="Polygon2D" parent="frog-char" unique_id=2012543082]
 position = Vector2(78, -384)
@@ -33,6 +40,15 @@ periodsec = 5.0
 ampdeg = 6.0
 ampx = 0.0
 ampy = 0.0
+
+[node name="tongue" type="Line2D" parent="frog-char/body/head" unique_id=450830008]
+position = Vector2(-258.66748, 4.016974)
+rotation = -0.08903891
+points = PackedVector2Array(0, 0, 0, 0)
+width = 43.65
+default_color = Color(1, 0.51283336, 0.20999998, 1)
+begin_cap_mode = 2
+end_cap_mode = 2
 
 [node name="leg2" type="Polygon2D" parent="frog-char/body" unique_id=978277470]
 show_behind_parent = true
@@ -91,3 +107,7 @@ periodsec = 4.0
 ampdeg = 3.0
 ampx = 0.0
 ampy = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="frog-char" unique_id=929234197]
+position = Vector2(-46, -330)
+shape = SubResource("CircleShape2D_edtqt")
