@@ -15,3 +15,6 @@ func _process(delta: float) -> void:
 	# var now = Time.get_unix_time_from_system()
 	
 	# if wasp_hit_time > 0.0 and now > wasp_hit_time + 0.5:
+
+func start_mad_phase():
+	get_parent().set_meta("phase", "mad")

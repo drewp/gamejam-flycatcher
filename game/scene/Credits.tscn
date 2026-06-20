@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://pqf1uv8vw776"]
 
-[ext_resource type="Texture2D" uid="uid://dta3071c7174a" path="res://29624badf33894f1da505a5b6e82e9f5.svg" id="1_4qwwl"]
+[ext_resource type="Texture2D" uid="uid://dta3071c7174a" path="res://asset/art/29624badf33894f1da505a5b6e82e9f5.svg" id="1_4qwwl"]
 [ext_resource type="Script" uid="uid://da1uobsn7fgft" path="res://credits.gd" id="1_obosj"]
 [ext_resource type="FontFile" uid="uid://cwlpn0eph2i05" path="res://asset/font/Black_Ops_One/BlackOpsOne-Regular.ttf" id="2_obosj"]
 
