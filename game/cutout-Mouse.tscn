@@ -147,6 +147,8 @@ ampx = 0.0
 ampy = 0.0
 
 [node name="mouse_area" type="Area2D" parent="mouse-char/mouse_body" unique_id=1767605685]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mouse-char/mouse_body/mouse_area" unique_id=703022853]
 position = Vector2(-50.79384, -234.9209)
