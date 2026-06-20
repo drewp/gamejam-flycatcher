@@ -44,7 +44,7 @@ ampy = 0.0
 [node name="tongue" type="Line2D" parent="frog-char/body/head" unique_id=450830008]
 position = Vector2(-258.66748, 4.016974)
 rotation = -0.08903891
-points = PackedVector2Array(0, 0, -200, -300)
+points = PackedVector2Array(0, 0, 0, 0)
 width = 43.65
 default_color = Color(1, 0.51283336, 0.20999998, 1)
 begin_cap_mode = 2
