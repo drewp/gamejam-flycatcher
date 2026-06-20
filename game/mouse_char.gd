@@ -4,10 +4,6 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
-var wasp_hit_time = 0.0
-var wasp_leave_time = 0.0
-var touching_wasp = false
-
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta

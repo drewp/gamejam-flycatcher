@@ -92,8 +92,8 @@ unique_name_in_owner = true
 position = Vector2(89, 165)
 
 [node name="CutoutFrog" parent="." unique_id=182426940 instance=ExtResource("3_kijre")]
-position = Vector2(831, 316)
-scale = Vector2(0.23, 0.23)
+position = Vector2(952, 462)
+scale = Vector2(0.1286303, 0.1286303)
 
 [node name="CutoutMouse" parent="." unique_id=1231813829 instance=ExtResource("4_m5mq4")]
 position = Vector2(586, 379)
