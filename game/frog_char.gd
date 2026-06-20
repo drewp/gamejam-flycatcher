@@ -39,11 +39,24 @@ func maybe_attack():
 
 	attacking = true
 	velocity.x = 0
+	
+	var wasp = get_node("/root/Bg/CutoutWasp/%wasp-char")
 
-	var anim_steps = 6.
-	for i in range(anim_steps):
-		extend_tongue(clamp(i / anim_steps * 3., 0.0, 1.0))
-		await get_tree().create_timer(2.0 / anim_steps).timeout
+	var grow_time = .4
+	var grow_steps = 3.
+	var lick_time = .8
+	var lick_steps = 8.
+	var damage = 1.
+
+	for i in range(grow_steps):
+		var frac = clamp(i / grow_steps, 0.0, 1.0)
+		extend_tongue(frac)
+		await get_tree().create_timer(grow_time / grow_steps, true, true).timeout
+
+	for i in range(lick_steps):
+		extend_tongue(1.0)
+		wasp.hurt(damage / lick_steps)
+		await get_tree().create_timer(lick_time / lick_steps, true, true).timeout
 	
 	extend_tongue(0.0)
 	attacking = false
