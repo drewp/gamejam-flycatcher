@@ -34,6 +34,7 @@ func char_movement(delta: float):
 	move_and_slide()
 
 func touches():
+	return
 	var body = get_parent().get_node("/root/Bg/CutoutWasp")
 	body.set_meta('phase', 'ready')
 	var now = Time.get_unix_time_from_system()

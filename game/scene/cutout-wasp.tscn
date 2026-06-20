@@ -16,6 +16,7 @@ metadata/phase = "ready"
 [node name="wasp-char" type="Node2D" parent="." unique_id=1715165882]
 unique_name_in_owner = true
 script = ExtResource("1_nr7qr")
+metadata/phase = "ready"
 
 [node name="Wasp3Body" type="Polygon2D" parent="wasp-char" unique_id=795152922]
 position = Vector2(152.55136, 146.12738)
