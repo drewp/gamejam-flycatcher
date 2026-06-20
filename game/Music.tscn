@@ -1,44 +1,77 @@
 [gd_scene format=3 uid="uid://0mnw4ovq8b60"]
 
 [ext_resource type="AudioStream" uid="uid://d2qqjbjvu6oga" path="res://asset/music/Musicsavingpart1.ogg" id="1_fw6bl"]
+[ext_resource type="FontFile" uid="uid://cwlpn0eph2i05" path="res://asset/font/Black_Ops_One/BlackOpsOne-Regular.ttf" id="1_s8d5d"]
 [ext_resource type="AudioStream" uid="uid://csicsojf36edc" path="res://asset/music/Musicsavingpart2.ogg" id="2_dsrwk"]
 [ext_resource type="AudioStream" uid="uid://pvano7tu2w78" path="res://asset/music/Musicsavingpart3.ogg" id="3_dfqnt"]
+[ext_resource type="AudioStream" uid="uid://d14v3nto1lv8r" path="res://asset/music/Musicsavingpart4.ogg" id="4_dfqnt"]
+[ext_resource type="Script" uid="uid://ffsslu2rebmo" path="res://music.gd" id="5_lbmby"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_j2vdx"]
+font = ExtResource("1_s8d5d")
+font_size = 19
 
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_lbmby"]
-clip_count = 3
+clip_count = 8
 clip_0/name = &"Musicsavingpart 1"
 clip_0/stream = ExtResource("1_fw6bl")
-clip_0/auto_advance = 0
+clip_0/auto_advance = 1
+clip_0/next_clip = 1
 clip_1/name = &"Musicsavingpart 2"
 clip_1/stream = ExtResource("2_dsrwk")
-clip_1/auto_advance = 0
+clip_1/auto_advance = 1
+clip_1/next_clip = 2
 clip_2/name = &"Musicsavingpart 3"
 clip_2/stream = ExtResource("3_dfqnt")
-clip_2/auto_advance = 0
+clip_2/auto_advance = 1
+clip_2/next_clip = 3
+clip_3/name = &"Musicsavingpart 2-1"
+clip_3/stream = ExtResource("1_fw6bl")
+clip_3/auto_advance = 1
+clip_3/next_clip = 4
+clip_4/name = &"Musicsavingpart 2-2"
+clip_4/stream = ExtResource("2_dsrwk")
+clip_4/auto_advance = 1
+clip_4/next_clip = 5
+clip_5/name = &"Musicsavingpart 2-3"
+clip_5/stream = ExtResource("3_dfqnt")
+clip_5/auto_advance = 1
+clip_5/next_clip = 6
+clip_6/name = &"Musicsavingpart 4"
+clip_6/stream = ExtResource("4_dfqnt")
+clip_6/auto_advance = 1
+clip_6/next_clip = 7
+clip_7/name = &"Musicsavingpart 4"
+clip_7/stream = ExtResource("4_dfqnt")
+clip_7/auto_advance = 1
+clip_7/next_clip = 6
 _transitions = {
-Vector2i(0, 1): {
+Vector2i(-1, -1): {
 "fade_beats": 1.0,
 "fade_mode": 4,
 "from_time": 3,
 "to_time": 1
 },
-Vector2i(1, 2): {
+Vector2i(6, 6): {
 "fade_beats": 1.0,
-"fade_mode": 4,
-"from_time": 3,
-"to_time": 1
-},
-Vector2i(2, -1): {
-"fade_beats": 1.0,
-"fade_mode": 4,
-"from_time": 3,
+"fade_mode": 0,
+"from_time": 0,
 "to_time": 1
 }
 }
 
 [node name="Music" type="Node2D" unique_id=606270931]
 
+[node name="Label" type="Label" parent="." unique_id=1663612139]
+offset_left = 18.0
+offset_top = 21.0
+offset_right = 287.0
+offset_bottom = 107.0
+text = "music clip..."
+label_settings = SubResource("LabelSettings_j2vdx")
+
 [node name="interactive" type="AudioStreamPlayer2D" parent="." unique_id=493756599]
 position = Vector2(117, 247)
 stream = SubResource("AudioStreamInteractive_lbmby")
 autoplay = true
+script = ExtResource("5_lbmby")
