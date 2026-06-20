@@ -1,6 +1,5 @@
-[gd_scene format=3 uid="uid://cue0e4slma3fv"]
+[gd_scene format=3 uid="uid://d3j6vbsik07v7"]
 
-[ext_resource type="Script" uid="uid://cpnnyrqrfly56" path="res://menu.gd" id="1_l48gv"]
 [ext_resource type="FontFile" uid="uid://cwlpn0eph2i05" path="res://asset/font/Black_Ops_One/BlackOpsOne-Regular.ttf" id="3_7xdm4"]
 [ext_resource type="Texture2D" uid="uid://cofngsw18cunt" path="res://asset/concept/frog.png" id="4_0ygtt"]
 [ext_resource type="Texture2D" uid="uid://dxoqy5kvll8f6" path="res://asset/concept/rat.png" id="5_0kxny"]
@@ -14,11 +13,7 @@ font_color = Color(0.544, 0.85, 0.6205, 1)
 shadow_size = 59
 shadow_color = Color(0, 0.27450982, 0, 0.6117647)
 
-[sub_resource type="LabelSettings" id="LabelSettings_l48gv"]
-font_size = 26
-
 [node name="Node2D" type="Node2D" unique_id=548967489]
-script = ExtResource("1_l48gv")
 
 [node name="Label" type="Label" parent="." unique_id=625113171]
 offset_left = 58.0
@@ -46,39 +41,3 @@ texture = ExtResource("6_6ymvq")
 position = Vector2(-105, -53)
 scale = Vector2(2.2644172, 2.2644165)
 texture = ExtResource("5_wbv52")
-
-[node name="Button" type="Button" parent="." unique_id=1362480205]
-offset_left = 367.0
-offset_top = 113.0
-offset_right = 707.0
-offset_bottom = 229.0
-
-[node name="Button2" type="Button" parent="." unique_id=1724716328]
-offset_left = 375.0
-offset_top = 392.0
-offset_right = 715.0
-offset_bottom = 508.0
-
-[node name="Button3" type="Button" parent="." unique_id=62614390]
-offset_left = 382.0
-offset_top = 514.0
-offset_right = 722.0
-offset_bottom = 630.0
-
-[node name="Line2D" type="Line2D" parent="." unique_id=595660933]
-points = PackedVector2Array(369, 308, 716, 303)
-width = 124.65
-default_color = Color(1, 0.54901963, 0.23529412, 1)
-
-[node name="Label2" type="Label" parent="." unique_id=958018939]
-offset_left = 394.0
-offset_top = 250.0
-offset_right = 724.0
-offset_bottom = 391.0
-text = "Sorry, this button is too sticky to press right now.
-"
-label_settings = SubResource("LabelSettings_l48gv")
-autowrap_mode = 2
-
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://pqf1uv8vw776"]
 
 [ext_resource type="Texture2D" uid="uid://dta3071c7174a" path="res://29624badf33894f1da505a5b6e82e9f5.svg" id="1_4qwwl"]
+[ext_resource type="Script" uid="uid://da1uobsn7fgft" path="res://credits.gd" id="1_obosj"]
 [ext_resource type="FontFile" uid="uid://cwlpn0eph2i05" path="res://asset/font/Black_Ops_One/BlackOpsOne-Regular.ttf" id="2_obosj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_k2yj5"]
@@ -11,6 +12,7 @@ outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Credits" type="Node2D" unique_id=116653384]
+script = ExtResource("1_obosj")
 
 [node name="29624Badf33894f1Da505a5b6e82e9f5" type="Sprite2D" parent="." unique_id=916825314]
 position = Vector2(660, 497)
@@ -32,3 +34,13 @@ on a rope and try to break all of the enemies.
 probably find something in this similar to it's 
 bosses."
 label_settings = SubResource("LabelSettings_k2yj5")
+
+[node name="Button" type="Button" parent="." unique_id=701817907]
+offset_left = 648.0
+offset_top = 510.0
+offset_right = 1143.0
+offset_bottom = 646.0
+theme_override_font_sizes/font_size = 64
+text = "Main Menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
