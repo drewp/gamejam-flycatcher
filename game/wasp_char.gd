@@ -3,31 +3,49 @@ extends Node2D
 
 var enter_phase_time = 0.0
 
+func set_phase(new_phase: String):
+	set_meta("phase", new_phase)
+	enter_phase_time = Time.get_unix_time_from_system()
+
 func _process(_delta: float) -> void:
 	var now = Time.get_unix_time_from_system()
-	var phase = get_meta("phase") 
+	var phase = get_meta("phase")
 
 	var area: Area2D = get_node("area")
-
+	var touching_mouse = false
 	for ovl in area.get_overlapping_bodies():
 		if ovl.name == "mouse-char":
+			touching_mouse = true
 			if phase == 'ready':
-				set_meta("phase", "notice")
+				set_phase("notice")
 				enter_phase_time = now
 
-	if phase == 'mad' and now > enter_phase_time + 0.5:
-		set_meta("phase", "ready")
-
-	var body = get_node('Wasp3Body')
-	if phase == 'ready':
-		body.get_node("wasp3legs").ampdeg = 0
-		body.get_node("wasp3legs").periodsec = 0
-	elif phase == 'mad':
-		body.get_node("wasp3legs").ampdeg = 15
-		body.get_node("wasp3legs").periodsec = 0.3
-	else:
-		assert(not ("unknown phase "+phase))
-	# var body = get_parent()
-	# var now = Time.get_unix_time_from_system()
 	
-	# if wasp_hit_time > 0.0 and now > wasp_hit_time + 0.5:
+
+	if phase == 'ready':
+		set_mad_legs(0.0)
+
+	elif phase == 'notice' and now > enter_phase_time + 0.5:
+		if touching_mouse:
+			set_phase("mad")
+		else:
+			set_phase("ready")
+
+	elif phase == 'mad' and now > enter_phase_time + 2.0:
+		set_phase("strike")
+		set_mad_legs(1.0)
+
+	elif phase == 'strike' and now > enter_phase_time + 0.3:
+		set_phase("ready")
+
+	else:
+		assert(false)
+
+func set_mad_legs(frac):
+	var body = get_node('Wasp3Body')
+	body.get_node("wasp3legs").ampdeg = frac * 15
+	body.get_node("wasp3legs").periodsec = frac * 0.3
+	
+func set_strike_flash(frac):
+	var body = get_node('Wasp3Body')
+	body.color = Color(1.0, 1.0 - frac, 1.0 - frac)
