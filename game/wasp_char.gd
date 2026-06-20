@@ -2,13 +2,13 @@ extends Node2D
 
 
 var enter_phase_time = 0.0
-var health = 5.
+var health = 20.
 
 func set_phase(new_phase: String):
 	set_meta("phase", new_phase)
 	enter_phase_time = Time.get_unix_time_from_system()
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	var now = Time.get_unix_time_from_system()
 	var phase = get_meta("phase")
 
@@ -19,7 +19,10 @@ func _process(_delta: float) -> void:
 	for ovl in area.get_overlapping_bodies():
 		if ovl.name == "mouse-char":
 			touching_mouse = true
+	if health<0.01: 
+		set_phase("dying")
 
+		
 	if phase == 'ready':
 		if touching_mouse:
 			set_phase("notice")
@@ -49,7 +52,15 @@ func _process(_delta: float) -> void:
 		area.collision_layer = 2
 		if now > enter_phase_time + 0.3:
 			set_phase("ready")
-
+			
+	elif phase == 'dying':
+		var snd: AudioStreamPlayer2D =get_node("Random14")
+		if not snd.playing: 
+			snd.play()
+		
+		position.y+= -500*delta
+		if position.y<-700: 
+			get_tree().change_scene_to_file("res://scene/menu.tscn")
 	else:
 		print("bad phase: ", phase)
 		assert(false)

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dsk3c1wtadsoi" path="res://scene/cutout-frog.tscn" id="3_kijre"]
 [ext_resource type="PackedScene" uid="uid://dj60uxl4jml0d" path="res://scene/cutout-mouse.tscn" id="4_m5mq4"]
 [ext_resource type="PackedScene" uid="uid://dw8osxyfypq03" path="res://Attack-Wasp.tscn" id="5_wkfvf"]
+[ext_resource type="PackedScene" uid="uid://0mnw4ovq8b60" path="res://scene/Music.tscn" id="6_ismto"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iq1of"]
 normal = Vector2(0.010908445, -0.9999405)
@@ -105,3 +106,6 @@ rotation = 1.1955506
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AttackWasp" unique_id=1208426974]
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_pi0n5")
+
+[node name="Music" parent="." unique_id=606270931 instance=ExtResource("6_ismto")]
+position = Vector2(-429, 671)
