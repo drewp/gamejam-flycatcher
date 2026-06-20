@@ -2,6 +2,7 @@ extends Node2D
 
 
 var enter_phase_time = 0.0
+var health = 5.
 
 func set_phase(new_phase: String):
 	set_meta("phase", new_phase)
@@ -12,7 +13,7 @@ func _process(_delta: float) -> void:
 	var phase = get_meta("phase")
 
 	var area: Area2D = get_node("area")
-	get_node("debug").text = 'phase: ' + phase + ' cl=' + str(area.collision_layer)
+	get_node("debug").text = 'H=' + str(health) + ' phase=' + phase + ' cl=' + str(area.collision_layer)
 	
 	var touching_mouse = false
 	for ovl in area.get_overlapping_bodies():
@@ -53,6 +54,9 @@ func _process(_delta: float) -> void:
 		print("bad phase: ", phase)
 		assert(false)
 
+func hurt(hp):
+	health -= hp
+	
 func set_mad_legs(frac):
 	var body = get_node('Wasp3Body')
 	body.get_node("wasp3legs").ampdeg = frac * 15
