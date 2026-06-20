@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://cue0e4slma3fv"]
 
-[ext_resource type="Script" uid="uid://cpnnyrqrfly56" path="res://menu.gd" id="1_l48gv"]
-[ext_resource type="FontFile" uid="uid://cwlpn0eph2i05" path="res://asset/font/Black_Ops_One/BlackOpsOne-Regular.ttf" id="3_7xdm4"]
-[ext_resource type="Texture2D" uid="uid://cofngsw18cunt" path="res://asset/concept/frog.png" id="4_0ygtt"]
-[ext_resource type="Texture2D" uid="uid://dxoqy5kvll8f6" path="res://asset/concept/rat.png" id="5_0kxny"]
-[ext_resource type="Texture2D" uid="uid://b1xjyj4ydllca" path="res://56c91424d1e054108ee93b3c3240774a.svg" id="5_wbv52"]
-[ext_resource type="Texture2D" uid="uid://bqbgldu1l21tx" path="res://asset/concept/wasp.png" id="6_6ymvq"]
+[ext_resource type="Script" uid="uid://cpnnyrqrfly56" path="res://menu.gd" id="1_vi6sp"]
+[ext_resource type="FontFile" uid="uid://cwlpn0eph2i05" path="res://asset/font/Black_Ops_One/BlackOpsOne-Regular.ttf" id="2_1qlln"]
+[ext_resource type="Texture2D" uid="uid://cofngsw18cunt" path="res://asset/concept/frog.png" id="3_wd6lm"]
+[ext_resource type="Texture2D" uid="uid://dxoqy5kvll8f6" path="res://asset/concept/rat.png" id="4_nuiae"]
+[ext_resource type="Texture2D" uid="uid://bqbgldu1l21tx" path="res://asset/concept/wasp.png" id="5_pb5j1"]
+[ext_resource type="Texture2D" uid="uid://b1xjyj4ydllca" path="res://asset/art/56c91424d1e054108ee93b3c3240774a.svg" id="6_6fejx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_82po7"]
-font = ExtResource("3_7xdm4")
+font = ExtResource("2_1qlln")
 font_size = 173
 font_color = Color(0.544, 0.85, 0.6205, 1)
 shadow_size = 59
@@ -18,7 +18,7 @@ shadow_color = Color(0, 0.27450982, 0, 0.6117647)
 font_size = 26
 
 [node name="Node2D" type="Node2D" unique_id=548967489]
-script = ExtResource("1_l48gv")
+script = ExtResource("1_vi6sp")
 
 [node name="Label" type="Label" parent="." unique_id=625113171]
 offset_left = 58.0
@@ -31,21 +31,21 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Frog" type="Sprite2D" parent="." unique_id=47334350]
 position = Vector2(241, 477)
-texture = ExtResource("4_0ygtt")
+texture = ExtResource("3_wd6lm")
 
 [node name="Rat" type="Sprite2D" parent="." unique_id=1883296796]
 position = Vector2(621, 468)
-texture = ExtResource("5_0kxny")
+texture = ExtResource("4_nuiae")
 
 [node name="Wasp" type="Sprite2D" parent="." unique_id=1350371045]
 position = Vector2(976.00006, 411)
 scale = Vector2(0.56814, 0.56814)
-texture = ExtResource("6_6ymvq")
+texture = ExtResource("5_pb5j1")
 
 [node name="Menu BG" type="Sprite2D" parent="." unique_id=2119851181]
 position = Vector2(-105, -53)
 scale = Vector2(2.2644172, 2.2644165)
-texture = ExtResource("5_wbv52")
+texture = ExtResource("6_6fejx")
 
 [node name="Button" type="Button" parent="." unique_id=1362480205]
 offset_left = 367.0

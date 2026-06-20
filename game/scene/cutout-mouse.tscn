@@ -1,23 +1,29 @@
 [gd_scene format=3 uid="uid://dj60uxl4jml0d"]
 
-[ext_resource type="Texture2D" uid="uid://csaqobxhdcji5" path="res://mouse.svg" id="1_ccrdw"]
+[ext_resource type="Texture2D" uid="uid://csaqobxhdcji5" path="res://asset/art/mouse.svg" id="1_ccrdw"]
 [ext_resource type="Script" uid="uid://c74g100fxvy8t" path="res://mouse_char.gd" id="1_fmtyt"]
 [ext_resource type="Script" uid="uid://gunbcwmogy7s" path="res://auto_walk.gd" id="2_fmtyt"]
 [ext_resource type="Script" uid="uid://swypbf3qgd8o" path="res://wiggle.gd" id="2_m7dut"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rrixd"]
-radius = 50.564697
-height = 286.97186
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fmtyt"]
 radius = 67.0
 height = 287.99994
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rrixd"]
+radius = 50.564697
+height = 286.97186
+
 [node name="CutoutMouse" type="Node2D" unique_id=1231813829]
 
 [node name="mouse-char" type="CharacterBody2D" parent="." unique_id=773421472]
+unique_name_in_owner = true
 position = Vector2(640, 423)
 script = ExtResource("1_fmtyt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mouse-char" unique_id=1484460862]
+position = Vector2(-671, -501)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_fmtyt")
 
 [node name="mouse_body" type="Polygon2D" parent="mouse-char" unique_id=766690357]
 unique_name_in_owner = true
@@ -146,20 +152,15 @@ ampdeg = -5.0
 ampx = 0.0
 ampy = 0.0
 
-[node name="mouse_area" type="Area2D" parent="mouse-char/mouse_body" unique_id=1767605685]
+[node name="area" type="Area2D" parent="mouse-char/mouse_body" unique_id=1767605685]
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="mouse-char/mouse_body/mouse_area" unique_id=703022853]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mouse-char/mouse_body/area" unique_id=703022853]
 position = Vector2(-50.79384, -234.9209)
 rotation = 1.5589596
 shape = SubResource("CapsuleShape2D_rrixd")
 debug_color = Color(0.5956389, 0.43504757, 0.85224444, 0.41960785)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="mouse-char" unique_id=1484460862]
-position = Vector2(-671, -501)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_fmtyt")
-
-[connection signal="area_entered" from="mouse-char/mouse_body/mouse_area" to="mouse-char" method="_on_mouse_area_area_entered"]
-[connection signal="area_exited" from="mouse-char/mouse_body/mouse_area" to="mouse-char" method="_on_mouse_area_area_exited"]
+[connection signal="area_entered" from="mouse-char/mouse_body/area" to="mouse-char" method="_on_mouse_area_area_entered"]
+[connection signal="area_exited" from="mouse-char/mouse_body/area" to="mouse-char" method="_on_mouse_area_area_exited"]

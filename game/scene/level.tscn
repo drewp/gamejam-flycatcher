@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://psxql8g4pjgo"]
 
-[ext_resource type="Texture2D" uid="uid://c1f4jc6p5s4vi" path="res://e8e10e111ee4d02854e322b652872e29.svg" id="1_t4gw0"]
-[ext_resource type="PackedScene" uid="uid://biqeiqr352aoy" path="res://cutout-wasp.tscn" id="2_tuaf8"]
-[ext_resource type="PackedScene" uid="uid://dj60uxl4jml0d" path="res://cutout-Mouse.tscn" id="3_iq1of"]
-[ext_resource type="PackedScene" uid="uid://dsk3c1wtadsoi" path="res://cutout-Frog.tscn" id="4_36ycx"]
-[ext_resource type="PackedScene" uid="uid://dw8osxyfypq03" path="res://Attack-Wasp.tscn" id="7_7sudn"]
+[ext_resource type="Texture2D" uid="uid://c1f4jc6p5s4vi" path="res://asset/art/e8e10e111ee4d02854e322b652872e29.svg" id="1_ack8h"]
+[ext_resource type="PackedScene" uid="uid://biqeiqr352aoy" path="res://scene/cutout-wasp.tscn" id="2_cwi33"]
+[ext_resource type="PackedScene" uid="uid://dsk3c1wtadsoi" path="res://scene/cutout-frog.tscn" id="3_kijre"]
+[ext_resource type="PackedScene" uid="uid://dj60uxl4jml0d" path="res://scene/cutout-mouse.tscn" id="4_m5mq4"]
+[ext_resource type="PackedScene" uid="uid://dw8osxyfypq03" path="res://Attack-Wasp.tscn" id="5_wkfvf"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iq1of"]
 normal = Vector2(0.010908445, -0.9999405)
@@ -61,7 +61,7 @@ _data = {
 modulate = Color(0.37413925, 0.37413928, 0.37413922, 1)
 position = Vector2(14, -36.000004)
 scale = Vector2(0.58501995, 0.58502)
-texture = ExtResource("1_t4gw0")
+texture = ExtResource("1_ack8h")
 offset = Vector2(1426.1464, 563.3721)
 
 [node name="walls-and-floor-coll" type="Node" parent="." unique_id=228363625]
@@ -87,18 +87,18 @@ position = Vector2(6.000001, -36.999992)
 scale = Vector2(0.58501995, 0.58502)
 shape = SubResource("WorldBoundaryShape2D_plmvg")
 
-[node name="CutoutWasp" parent="." unique_id=484918843 instance=ExtResource("2_tuaf8")]
+[node name="CutoutWasp" parent="." unique_id=484918843 instance=ExtResource("2_cwi33")]
 unique_name_in_owner = true
 position = Vector2(89, 165)
 
-[node name="CutoutFrog" parent="." unique_id=182426940 instance=ExtResource("4_36ycx")]
+[node name="CutoutFrog" parent="." unique_id=182426940 instance=ExtResource("3_kijre")]
 position = Vector2(831, 316)
 scale = Vector2(0.23, 0.23)
 
-[node name="CutoutMouse" parent="." unique_id=1231813829 instance=ExtResource("3_iq1of")]
+[node name="CutoutMouse" parent="." unique_id=1231813829 instance=ExtResource("4_m5mq4")]
 position = Vector2(586, 379)
 
-[node name="AttackWasp" parent="." unique_id=1625224757 instance=ExtResource("7_7sudn")]
+[node name="AttackWasp" parent="." unique_id=1625224757 instance=ExtResource("5_wkfvf")]
 position = Vector2(407, 14)
 rotation = 1.1955506
 

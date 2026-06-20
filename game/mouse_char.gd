@@ -38,8 +38,10 @@ func touches():
 	body.set_meta('phase', 'ready')
 	var now = Time.get_unix_time_from_system()
 	
+	
 	if wasp_hit_time > 0.0 and now > wasp_hit_time + 0.0:
 		body.set_meta('phase', 'mad')
+		%wasp_anim.start_mad_phase()
 
 	if wasp_hit_time > 0.0 and now > wasp_hit_time + 1.2:
 		var area: Area2D =get_node("/root/Bg/CutoutWasp/anim/wasp_area")

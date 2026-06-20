@@ -1,13 +1,16 @@
 [gd_scene format=3 uid="uid://dsk3c1wtadsoi"]
 
-[ext_resource type="Texture2D" uid="uid://dngnqluhs4fi7" path="res://Frogimg.svg" id="1_0xrb8"]
+[ext_resource type="Texture2D" uid="uid://dngnqluhs4fi7" path="res://asset/art/Frogimg.svg" id="1_0xrb8"]
 [ext_resource type="Script" uid="uid://swypbf3qgd8o" path="res://wiggle.gd" id="2_1p52q"]
 
 [node name="CutoutFrog" type="Node2D" unique_id=182426940]
 
-[node name="body" type="Polygon2D" parent="." unique_id=2012543082]
-position = Vector2(716, 251.00002)
-rotation = -0.48275226
+[node name="frog-char" type="Node2D" parent="." unique_id=1717195958]
+unique_name_in_owner = true
+
+[node name="body" type="Polygon2D" parent="frog-char" unique_id=2012543082]
+position = Vector2(78, -384)
+rotation = -0.4827523
 offset = Vector2(-729.063, -498.76862)
 texture = ExtResource("1_0xrb8")
 polygon = PackedVector2Array(777.09595, 263.27975, 386.6714, 386.5718, 707.7444, 766.7222, 1159.815, 607.47003)
@@ -18,7 +21,7 @@ ampdeg = 0.0
 ampx = 0.0
 ampy = 0.0
 
-[node name="head" type="Polygon2D" parent="body" unique_id=977788892]
+[node name="head" type="Polygon2D" parent="frog-char/body" unique_id=977788892]
 position = Vector2(-105.16449, -161.24649)
 rotation = 0.5717912
 offset = Vector2(-530.647, -148.22655)
@@ -31,7 +34,7 @@ ampdeg = 6.0
 ampx = 0.0
 ampy = 0.0
 
-[node name="leg2" type="Polygon2D" parent="body" unique_id=978277470]
+[node name="leg2" type="Polygon2D" parent="frog-char/body" unique_id=978277470]
 show_behind_parent = true
 position = Vector2(-10.613964, 74.136894)
 rotation = -0.17371488
@@ -46,7 +49,7 @@ ampdeg = 0.0
 ampx = 5.0
 ampy = 0.0
 
-[node name="leg1" type="Polygon2D" parent="body" unique_id=266078248]
+[node name="leg1" type="Polygon2D" parent="frog-char/body" unique_id=266078248]
 position = Vector2(-191.15614, -61.80084)
 rotation = -0.068100855
 scale = Vector2(1.1420974, 1.1420972)
@@ -60,7 +63,7 @@ ampdeg = 0.0
 ampx = 6.0
 ampy = 0.0
 
-[node name="leg3" type="Polygon2D" parent="body" unique_id=2009570355]
+[node name="leg3" type="Polygon2D" parent="frog-char/body" unique_id=2009570355]
 position = Vector2(121.555176, 93.8581)
 rotation = 0.07607816
 offset = Vector2(-1079.7051, -855.8407)
@@ -73,7 +76,7 @@ ampdeg = 0.0
 ampx = 0.0
 ampy = 4.0
 
-[node name="leg4" type="Polygon2D" parent="body" unique_id=1251410508]
+[node name="leg4" type="Polygon2D" parent="frog-char/body" unique_id=1251410508]
 show_behind_parent = true
 position = Vector2(0.6662998, 142.61801)
 rotation = 0.30381036
