@@ -12,33 +12,45 @@ func _process(_delta: float) -> void:
 	var phase = get_meta("phase")
 
 	var area: Area2D = get_node("area")
+	get_node("debug").text = 'phase: ' + phase + ' cl=' + str(area.collision_layer)
+	
 	var touching_mouse = false
 	for ovl in area.get_overlapping_bodies():
 		if ovl.name == "mouse-char":
 			touching_mouse = true
-			if phase == 'ready':
-				set_phase("notice")
-				enter_phase_time = now
-
-	
 
 	if phase == 'ready':
-		set_mad_legs(0.0)
-
-	elif phase == 'notice' and now > enter_phase_time + 0.5:
 		if touching_mouse:
-			set_phase("mad")
-		else:
+			set_phase("notice")
+		set_mad_legs(0.0)
+		set_strike_flash(0.0)
+		area.collision_layer = 0
+
+	elif phase == 'notice':
+		if now > enter_phase_time + 0.5:
+			if touching_mouse:
+				set_phase("mad")
+			else:
+				set_phase("ready")
+
+	elif phase == 'mad':
+		set_mad_legs(1.0)
+		if now > enter_phase_time + 2.0:
+			set_phase("strike")
+
+	elif phase == 'strike':
+		set_mad_legs(1.0)
+		set_strike_flash(randf())
+		
+		if touching_mouse:
+			pass
+
+		area.collision_layer = 2
+		if now > enter_phase_time + 0.3:
 			set_phase("ready")
 
-	elif phase == 'mad' and now > enter_phase_time + 2.0:
-		set_phase("strike")
-		set_mad_legs(1.0)
-
-	elif phase == 'strike' and now > enter_phase_time + 0.3:
-		set_phase("ready")
-
 	else:
+		print("bad phase: ", phase)
 		assert(false)
 
 func set_mad_legs(frac):

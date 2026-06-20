@@ -9,10 +9,6 @@ var wasp_leave_time = 0.0
 var touching_wasp = false
 
 func _physics_process(delta: float) -> void:
-	char_movement(delta)
-	touches()
-
-func char_movement(delta: float):
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
@@ -30,46 +26,13 @@ func char_movement(delta: float):
 		if abs(velocity.x) < 0.001:
 			velocity.x = 0
 			
-
 	move_and_slide()
 
-func touches():
-	return
-	var body = get_parent().get_node("/root/Bg/CutoutWasp")
-	body.set_meta('phase', 'ready')
-	var now = Time.get_unix_time_from_system()
-	
-	
-	if wasp_hit_time > 0.0 and now > wasp_hit_time + 0.0:
-		body.set_meta('phase', 'mad')
-		%wasp_anim.start_mad_phase()
 
-	if wasp_hit_time > 0.0 and now > wasp_hit_time + 1.2:
-		var area: Area2D =get_node("/root/Bg/CutoutWasp/anim/wasp_area")
-		area.set_collision_layer_value(2, true)
-		if touching_wasp:
-			deadly_item_touching_mouse()
-
-	if wasp_hit_time > 0.0 and now > wasp_hit_time + 1.2:
-		wasp_hit_time = 0.0
+func _on_mouse_area_area_entered(area: Area2D) -> void:
+	if area.collision_layer == 2:
+		deadly_item_touching_mouse()
 
 
 func deadly_item_touching_mouse():
 	get_tree().reload_current_scene()
-
-
-func _on_mouse_area_area_entered(area: Area2D) -> void:
-	var now = Time.get_unix_time_from_system()
-	if area.name == "wasp_area":
-		wasp_hit_time = now
-		wasp_leave_time = 0.0
-		touching_wasp=true
-	if area.collision_layer == 2:
-		deadly_item_touching_mouse()
-
-func _on_mouse_area_area_exited(area: Area2D) -> void:
-	var now = Time.get_unix_time_from_system()
-	if area.name=="wasp_area":
-		touching_wasp = false
-	if area.name == "robot":
-		deadly_item_touching_mouse()
