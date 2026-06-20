@@ -90,5 +90,13 @@ text = "Sorry, this button is too sticky to press right now.
 label_settings = SubResource("LabelSettings_l48gv")
 autowrap_mode = 2
 
+[node name="Label" type="Label" parent="." unique_id=864394926]
+offset_right = 1143.0
+offset_bottom = 626.0
+text = "Why did you click quit this is a web browser not a steam game you don't press quit to leave web games but do you actually quit I hope not because I worked really hard on making this and if you are still somehow reading you must be sucked into this game btw if you are reading then you can tell your friends codeword panda to let them know that you are cool and read to the end quick challenge try to read this whole thing in one breath and if you can then you probably broke a world record and if you didn't I am sorry for wasting your time but if you are still reading then you are wasting your own time codeword lhama so that you can tell your friends who think it's panda that the codeword is lhama and they didn't read to the end and this is the part where if I was a youtuber I would say like and subscribe this is my first game jam but I think itch.io only lets you like/vote for games do that if you want and also a fun challenge try to find the only period the answer will be written here backwards 
+                                                     iO.Chit ni si ti"
+label_settings = SubResource("LabelSettings_wm6dn")
+autowrap_mode = 2
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
