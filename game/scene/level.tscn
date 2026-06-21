@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://biqeiqr352aoy" path="res://scene/cutout-wasp.tscn" id="2_cwi33"]
 [ext_resource type="PackedScene" uid="uid://dsk3c1wtadsoi" path="res://scene/cutout-frog.tscn" id="3_kijre"]
 [ext_resource type="PackedScene" uid="uid://dj60uxl4jml0d" path="res://scene/cutout-mouse.tscn" id="4_m5mq4"]
-[ext_resource type="PackedScene" uid="uid://dw8osxyfypq03" path="res://Attack-Wasp.tscn" id="5_wkfvf"]
 [ext_resource type="PackedScene" uid="uid://0mnw4ovq8b60" path="res://scene/Music.tscn" id="6_ismto"]
+[ext_resource type="Script" uid="uid://de8qepi7cbbdh" path="res://stingers.gd" id="7_bddx0"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iq1of"]
 normal = Vector2(0.010908445, -0.9999405)
@@ -18,43 +18,6 @@ distance = 113.42
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_plmvg"]
 normal = Vector2(-0.9999924, 0.0039215465)
 distance = -1820.557
-
-[sub_resource type="Animation" id="Animation_b16yh"]
-length = 3.0333333
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AttackWasp:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.03, 3.0333333),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(407, 14), Vector2(407, 14), Vector2(407, 470)]
-}
-
-[sub_resource type="Animation" id="Animation_twoho"]
-resource_name = "Tail_Fall"
-length = 2.1666667
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AttackWasp:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.08, 2.1666667),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(556, 47), Vector2(556, 47), Vector2(556, 450)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_pi0n5"]
-_data = {
-&"RESET": SubResource("Animation_b16yh"),
-&"Tail_Fall": SubResource("Animation_twoho")
-}
 
 [node name="Bg" type="Node2D" unique_id=946243218]
 
@@ -99,13 +62,8 @@ scale = Vector2(0.1286303, 0.1286303)
 [node name="CutoutMouse" parent="." unique_id=1231813829 instance=ExtResource("4_m5mq4")]
 position = Vector2(586, 379)
 
-[node name="AttackWasp" parent="." unique_id=1625224757 instance=ExtResource("5_wkfvf")]
-position = Vector2(407, 14)
-rotation = 1.1955506
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AttackWasp" unique_id=1208426974]
-root_node = NodePath("../..")
-libraries/ = SubResource("AnimationLibrary_pi0n5")
-
 [node name="Music" parent="." unique_id=606270931 instance=ExtResource("6_ismto")]
 position = Vector2(-429, 671)
+
+[node name="_stingers" type="Node2D" parent="." unique_id=1452756192]
+script = ExtResource("7_bddx0")
