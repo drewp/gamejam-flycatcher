@@ -2,7 +2,7 @@ extends Node2D
 
 
 var enter_phase_time = 0.0
-var health = 20.
+var health = 20.0
 
 func set_phase(new_phase: String):
 	set_meta("phase", new_phase)
