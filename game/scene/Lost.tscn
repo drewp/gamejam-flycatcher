@@ -1,17 +1,15 @@
 [gd_scene format=3 uid="uid://bweqbh5tdxh3m"]
 
 [ext_resource type="Script" uid="uid://c4ub1v0humbrl" path="res://scene/lost.gd" id="1_t0on2"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6pwtg"]
-load_path = "res://.godot/imported/9cbd887f0476288240df708619a14734.svg-32bba4b302e5885d6c5b1fbdbc8f523d.ctex"
+[ext_resource type="Texture2D" uid="uid://cjqj7twlbxq6q" path="res://asset/art/9cbd887f0476288240df708619a14734.svg" id="2_eyls3"]
 
 [node name="Lost" type="Node2D" unique_id=1326616073]
 script = ExtResource("1_t0on2")
 
-[node name="9Cbd887f0476288240Df708619a14734" type="Sprite2D" parent="." unique_id=406431819]
-position = Vector2(294.00003, 327.00003)
-scale = Vector2(2.54, 1.865)
-texture = SubResource("CompressedTexture2D_6pwtg")
+[node name="9Cbd887f0476288240Df708619a14735" type="Sprite2D" parent="." unique_id=241387522]
+position = Vector2(322.99457, 198)
+scale = Vector2(2.420765, 2.420765)
+texture = ExtResource("2_eyls3")
 
 [node name="Button" type="Button" parent="." unique_id=643011205]
 offset_left = 50.0
