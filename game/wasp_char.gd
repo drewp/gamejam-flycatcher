@@ -34,7 +34,9 @@ func _process(delta: float) -> void:
 
 	if not low_health and health < 10.0:
 		low_health = true
-		motion.tween_property(%screen_pos, "position", Vector2(500, 150), 1)
+		motion.kill()
+		motion = create_tween()
+		motion.tween_property(%screen_pos, "position", Vector2(200, 150), 2)
 		motion.tween_property(%screen_pos, "scale", Vector2(1, 1), 0.1)
 
 		
