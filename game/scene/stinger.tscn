@@ -3,6 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://edr7xeia5s0w" path="res://asset/art/cdbfaa63839993798a0c44d3423daa37.svg" id="1_kpjq6"]
 [ext_resource type="Script" uid="uid://swypbf3qgd8o" path="res://wiggle.gd" id="2_x2htg"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kpjq6"]
+radius = 153.0087
+height = 348.9671
+
 [node name="Stinger" type="Node2D" unique_id=792559924]
 
 [node name="body" type="Polygon2D" parent="." unique_id=387398888]
@@ -18,3 +22,11 @@ offsetsec = 0.3
 ampdeg = 0.0
 ampx = 0.0
 ampy = 5.0
+
+[node name="Area2D" type="Area2D" parent="body" unique_id=2137254247]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="body/Area2D" unique_id=1524111240]
+position = Vector2(13.421774, 67.109024)
+shape = SubResource("CapsuleShape2D_kpjq6")

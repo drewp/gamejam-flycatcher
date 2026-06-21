@@ -74,6 +74,6 @@ func extend_tongue(frac):
 
 	var s_out = (s.get_global_transform_with_canvas()).affine_inverse() * (e_vp) * frac
 	s.points[1] = s_out
-	print(' global=', s.global_position, ' vp=', s_vp, '    ',
-		  ' global=', e.global_position, ' vp=', e_vp, ' s_out=', s_out,
-		  ' xf=')
+	#print(' global=', s.global_position, ' vp=', s_vp, '    ',
+		  #' global=', e.global_position, ' vp=', e_vp, ' s_out=', s_out,
+		  #' xf=')

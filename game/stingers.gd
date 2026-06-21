@@ -7,16 +7,20 @@ func _ready() -> void:
 
 
 func create_children(obj: Node2D) -> void:
-	for i in range(8):
+	for i in range(2):
 		var c = obj.duplicate()
 		var pos_parent = Node2D.new()
 		pos_parent.add_child(c)
-		pos_parent.position = Vector2(300 + i * 100, 50)
+		pos_parent.position = random_start()
 		add_child(pos_parent)
-
-func _process(_delta: float) -> void:
+func random_start():
+	return Vector2(lerp(100, 900, randf()), 50)
+func _process(delta: float) -> void:
 	var now = Time.get_unix_time_from_system()
 	var column = 0
 	for s in get_children():
-		s.position.y = 50 + fmod(now * 90 + 300 * column, 500)
+		s.position.y += 200*delta 
+		if s.position.y>650:
+			s.position = random_start()
+			s.position.y = 50
 		column += 1
