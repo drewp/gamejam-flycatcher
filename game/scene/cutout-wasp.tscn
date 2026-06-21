@@ -10,7 +10,6 @@ radius = 140.0
 height = 334.0
 
 [node name="Cutout" type="Node2D" unique_id=484918843]
-position = Vector2(-147, -147)
 metadata/_edit_vertical_guides_ = [-661.0, -859.0]
 metadata/phase = "ready"
 
@@ -19,8 +18,12 @@ unique_name_in_owner = true
 script = ExtResource("1_nr7qr")
 metadata/phase = "ready"
 
-[node name="Wasp3Body" type="Polygon2D" parent="wasp-char" unique_id=795152922]
-position = Vector2(152.55136, 146.12738)
+[node name="screen_pos" type="Node2D" parent="wasp-char" unique_id=815438468]
+unique_name_in_owner = true
+
+[node name="Wasp3Body" type="Polygon2D" parent="wasp-char/screen_pos" unique_id=795152922]
+unique_name_in_owner = true
+position = Vector2(1.5258789e-05, -8.999985)
 scale = Vector2(0.5344375, 0.53443766)
 offset = Vector2(-737, -450)
 texture = ExtResource("1_q5eix")
@@ -33,7 +36,7 @@ ampdeg = 0.0
 ampx = 0.0
 ampy = 5.0
 
-[node name="wasp1wing_far" type="Polygon2D" parent="wasp-char/Wasp3Body" unique_id=656198280]
+[node name="wasp1wing_far" type="Polygon2D" parent="wasp-char/screen_pos/Wasp3Body" unique_id=656198280]
 position = Vector2(-15, -42)
 offset = Vector2(-210, -110)
 texture = ExtResource("1_q5eix")
@@ -47,7 +50,7 @@ ampdeg = -20.0
 ampx = 6.0
 ampy = 8.0
 
-[node name="wasp4wing_near" type="Polygon2D" parent="wasp-char/Wasp3Body" unique_id=471439182]
+[node name="wasp4wing_near" type="Polygon2D" parent="wasp-char/screen_pos/Wasp3Body" unique_id=471439182]
 position = Vector2(-22, -12)
 rotation = 0.038632903
 offset = Vector2(-396, -526)
@@ -60,7 +63,7 @@ ampdeg = -20.0
 ampx = -2.0
 ampy = -6.0
 
-[node name="wasp3legs" type="Polygon2D" parent="wasp-char/Wasp3Body" unique_id=381712431]
+[node name="wasp3legs" type="Polygon2D" parent="wasp-char/screen_pos/Wasp3Body" unique_id=381712431]
 position = Vector2(25.601074, 15.227203)
 offset = Vector2(-1130.6011, -310.2272)
 texture = ExtResource("1_q5eix")
@@ -73,7 +76,7 @@ ampdeg = 0.0
 ampx = 0.0
 ampy = 4.0
 
-[node name="wasp2head" type="Polygon2D" parent="wasp-char/Wasp3Body" unique_id=1318414815]
+[node name="wasp2head" type="Polygon2D" parent="wasp-char/screen_pos/Wasp3Body" unique_id=1318414815]
 position = Vector2(23, -44)
 offset = Vector2(-464, -249)
 texture = ExtResource("1_q5eix")
@@ -85,19 +88,20 @@ ampdeg = 0.0
 ampx = 2.0
 ampy = 1.0
 
-[node name="area" type="Area2D" parent="wasp-char" unique_id=214504845]
+[node name="area" type="Area2D" parent="wasp-char/screen_pos" unique_id=214504845]
 position = Vector2(1.5258789e-05, 1.5258789e-05)
 scale = Vector2(0.99999994, 0.99999994)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wasp-char/area" unique_id=1082681409]
-position = Vector2(147, 146)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wasp-char/screen_pos/area" unique_id=1082681409]
 shape = SubResource("CapsuleShape2D_gok2e")
 
-[node name="debug" type="Label" parent="wasp-char" unique_id=2006865132]
-offset_left = 104.0
-offset_top = 19.000008
-offset_right = 153.0
-offset_bottom = 68.00001
+[node name="debug" type="Label" parent="wasp-char/screen_pos" unique_id=2006865132]
+unique_name_in_owner = true
+visible = false
+offset_left = -37.0
+offset_top = -127.99999
+offset_right = 12.0
+offset_bottom = -78.99999
 text = "debug
 "
 
