@@ -7,7 +7,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fmtyt"]
 radius = 42.0
-height = 287.99994
+height = 112.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rrixd"]
 resource_name = "mousecap"
@@ -22,7 +22,7 @@ position = Vector2(640, 423)
 script = ExtResource("1_fmtyt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mouse-char" unique_id=1484460862]
-position = Vector2(-671, -480)
+position = Vector2(-653, -456)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_fmtyt")
 
@@ -30,7 +30,7 @@ shape = SubResource("CapsuleShape2D_fmtyt")
 unique_name_in_owner = true
 z_index = 5
 position = Vector2(-639.99994, -422.99994)
-scale = Vector2(0.315, 0.315)
+scale = Vector2(0.145, 0.145)
 offset = Vector2(-2384.127, -1361.9047)
 texture = ExtResource("1_ccrdw")
 polygon = PackedVector2Array(2596.467, 906.5562, 2145.353, 986.97766, 2137.8135, 1226.9855, 2572.592, 1219.4459, 2669.349, 1118.9191, 2661.4106, 946.718)

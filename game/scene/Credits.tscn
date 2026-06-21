@@ -40,6 +40,10 @@ offset_left = 648.0
 offset_top = 510.0
 offset_right = 1143.0
 offset_bottom = 646.0
+theme_override_colors/font_color = Color(0.86784804, 0.90303415, 0.65320104, 1)
+theme_override_colors/font_focus_color = Color(0.9490196, 0.33333334, 0.9490196, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.27058825, 1, 1)
+theme_override_colors/icon_normal_color = Color(0.5529412, 0.6313726, 1, 1)
 theme_override_font_sizes/font_size = 64
 text = "Main Menu"
 
