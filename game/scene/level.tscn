@@ -53,10 +53,9 @@ shape = SubResource("WorldBoundaryShape2D_plmvg")
 
 [node name="CutoutWasp" parent="." unique_id=484918843 instance=ExtResource("2_cwi33")]
 unique_name_in_owner = true
-position = Vector2(89, 165)
 
 [node name="CutoutFrog" parent="." unique_id=182426940 instance=ExtResource("3_kijre")]
-position = Vector2(952, 462)
+position = Vector2(192.00006, 462)
 scale = Vector2(0.1286303, 0.1286303)
 
 [node name="CutoutMouse" parent="." unique_id=1231813829 instance=ExtResource("4_m5mq4")]

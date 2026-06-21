@@ -19,8 +19,10 @@ func _physics_process(delta: float) -> void:
 
 	# if attacking:
 	# 	extend_tongue(1.0)
+	always_face_wasp()
 
 	move_and_slide()
+	# queue_redraw()
 
 func maybe_jump():
 	if attacking:
@@ -61,16 +63,36 @@ func maybe_attack():
 	extend_tongue(0.0)
 	attacking = false
 
+# func _draw() -> void:
+# 	draw_circle(to_local(global_position), 100.0, Color.RED)
+# 	var wasp = get_node("/root/Bg/CutoutWasp/%wasp-char/screen_pos")
+# 	draw_circle(to_local(wasp.global_position), 100.0, Color.YELLOW)
+
+func always_face_wasp():
+	var wasp = get_node("/root/Bg/CutoutWasp/%wasp-char/screen_pos")
+	var wasp_global = to_local(wasp.global_position)
+	var self_global = (position)
+	if wasp_global.x < self_global.x:
+		scale.x = 1.0
+	else:
+		scale.x = -1
+
 func extend_tongue(frac):
 	var s: Line2D = get_node("body/head/tongue")
 	assert(s.points.size() == 2)
 
-	var e = get_node("/root/Bg/CutoutWasp/%wasp-char/Wasp3Body/wasp2head")
-	
+	var e = get_node("/root/Bg/CutoutWasp/%wasp-char/screen_pos/Wasp3Body/wasp2head")
+	if not e:
+		return
+		
 	var s_vp = s.get_global_transform_with_canvas() * s.position
 	var e_vp = e.get_global_transform_with_canvas() * e.position
 	
 	e_vp += Vector2(50, -15)
+	var wasp = get_node("/root/Bg/CutoutWasp/%wasp-char/screen_pos")
+	if wasp.scale.x < 0:
+		e_vp += Vector2(-100, -15)
+
 
 	var s_out = (s.get_global_transform_with_canvas()).affine_inverse() * (e_vp) * frac
 	s.points[1] = s_out
