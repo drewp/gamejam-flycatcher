@@ -31,4 +31,4 @@ func _on_mouse_area_area_entered(area: Area2D) -> void:
 
 
 func deadly_item_touching_mouse():
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://scene/Lost.tscn")

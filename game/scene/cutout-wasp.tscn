@@ -6,8 +6,8 @@
 [ext_resource type="AudioStream" uid="uid://c3tfk8p45xe86" path="res://asset/sfx/Random14.wav" id="4_wv888"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gok2e"]
-radius = 140.0
-height = 334.0
+radius = 175.0
+height = 414.0
 
 [node name="Cutout" type="Node2D" unique_id=484918843]
 metadata/_edit_vertical_guides_ = [-661.0, -859.0]
@@ -93,6 +93,7 @@ position = Vector2(1.5258789e-05, 1.5258789e-05)
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wasp-char/screen_pos/area" unique_id=1082681409]
+position = Vector2(-35.000015, -16.000015)
 shape = SubResource("CapsuleShape2D_gok2e")
 
 [node name="debug" type="Label" parent="wasp-char/screen_pos" unique_id=2006865132]
