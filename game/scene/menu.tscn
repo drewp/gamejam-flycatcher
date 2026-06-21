@@ -8,27 +8,18 @@
 [ext_resource type="Texture2D" uid="uid://b1xjyj4ydllca" path="res://asset/art/56c91424d1e054108ee93b3c3240774a.svg" id="6_6fejx"]
 [ext_resource type="AudioStream" uid="uid://c7hy6sjrtu4ey" path="res://asset/sfx/Random11.wav" id="7_1qlln"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_82po7"]
-font = ExtResource("2_1qlln")
-font_size = 173
-font_color = Color(0.544, 0.85, 0.6205, 1)
-shadow_size = 59
-shadow_color = Color(0, 0.27450982, 0, 0.6117647)
-
 [sub_resource type="LabelSettings" id="LabelSettings_l48gv"]
 font_size = 26
 
+[sub_resource type="LabelSettings" id="LabelSettings_82po7"]
+font = ExtResource("2_1qlln")
+font_size = 85
+font_color = Color(0.87946093, 0.74838775, 0.28811026, 1)
+shadow_size = 59
+shadow_color = Color(0, 0.27450982, 0, 0.6117647)
+
 [node name="Node2D" type="Node2D" unique_id=548967489]
 script = ExtResource("1_vi6sp")
-
-[node name="Label" type="Label" parent="." unique_id=625113171]
-offset_left = 58.0
-offset_top = 65.0
-offset_right = 1072.0
-offset_bottom = 283.0
-text = "Flycatcher"
-label_settings = SubResource("LabelSettings_82po7")
-metadata/_edit_use_anchors_ = true
 
 [node name="Frog" type="Sprite2D" parent="." unique_id=47334350]
 position = Vector2(241, 477)
@@ -92,6 +83,16 @@ offset_bottom = 391.0
 text = "Sorry, this button is too sticky to press right now."
 label_settings = SubResource("LabelSettings_l48gv")
 autowrap_mode = 2
+
+[node name="Label" type="Label" parent="." unique_id=625113171]
+offset_left = 291.0
+offset_top = -6.0
+offset_right = 1305.0
+offset_bottom = 212.0
+text = "Flycatcher"
+label_settings = SubResource("LabelSettings_82po7")
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
