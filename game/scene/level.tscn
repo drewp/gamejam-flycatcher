@@ -22,7 +22,7 @@ distance = -1820.557
 [node name="Bg" type="Node2D" unique_id=946243218]
 
 [node name="honey-cave" type="Sprite2D" parent="." unique_id=1698998414]
-modulate = Color(0.37413925, 0.37413928, 0.37413922, 1)
+modulate = Color(0.73300546, 0.73300546, 0.7330052, 1)
 position = Vector2(14, -36.000004)
 scale = Vector2(0.58501995, 0.58502)
 texture = ExtResource("1_ack8h")
