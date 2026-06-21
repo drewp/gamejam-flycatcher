@@ -6,8 +6,8 @@
 [ext_resource type="AudioStream" uid="uid://c3tfk8p45xe86" path="res://asset/sfx/Random14.wav" id="4_wv888"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gok2e"]
-radius = 175.0
-height = 414.0
+radius = 243.0
+height = 520.0
 
 [node name="Cutout" type="Node2D" unique_id=484918843]
 metadata/_edit_vertical_guides_ = [-661.0, -859.0]
